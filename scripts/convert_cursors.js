@@ -83,6 +83,48 @@ const MAC_CURSOR_ID_ALIASES = {
   ],
 };
 
+const MAC_CURSOR_ID_FIXED = {
+  Arrow: [
+    "com.apple.coregraphics.Arrow",
+    "com.apple.coregraphics.ArrowCtx",
+  ],
+  Text: [
+    "com.apple.coregraphics.IBeam",
+    "com.apple.coregraphics.IBeamXOR",
+  ],
+  Wait: [
+    "com.apple.coregraphics.Wait",
+    "com.apple.cursor.4",
+  ],
+  Link: [
+    "com.apple.cursor.2",
+    "com.apple.cursor.13",
+  ],
+  Move: [
+    "com.apple.coregraphics.Move",
+  ],
+  Forbidden: [
+    "com.apple.cursor.3",
+  ],
+  Help: [
+    "com.apple.cursor.40",
+  ],
+  ResizeNS: [
+    "com.apple.cursor.23",
+  ],
+  ResizeEW: [
+    "com.apple.cursor.19",
+  ],
+  ResizeDiag1: [
+    "com.apple.cursor.34",
+  ],
+  ResizeDiag2: [
+    "com.apple.cursor.30",
+  ],
+};
+
+const ANIMATED_ROLES = new Set(["Text", "Wait"]);
+
 const THEMES = {
   Regular: {
     name: "Blue Archive Regular",
@@ -420,8 +462,8 @@ function plist(dictionary) {
 function convertOne(themeName, role, fileName, theme, report, options = {}) {
   const src = path.join(theme.base, fileName);
   const ext = path.extname(fileName).toLowerCase();
-  const assetRoot = options.staticOnly ? "converted_assets_static" : "converted_assets";
-  const frameRoot = options.staticOnly ? "generated_frames_static" : "generated_frames";
+  const assetRoot = options.assetRoot || (options.staticOnly ? "converted_assets_static" : "converted_assets");
+  const frameRoot = options.frameRoot || (options.staticOnly ? "generated_frames_static" : "generated_frames");
   const assetDir = path.join(ROOT, assetRoot, themeName, role);
   const frameDir = path.join(ROOT, frameRoot, themeName, role);
   ensureDir(assetDir);
@@ -524,13 +566,14 @@ function retinaFrame(frame) {
 
 function makeCape(theme, themeName, cursors, suffix) {
   const isStatic = suffix === "STATIC";
+  const isFixed = suffix === "STATIC_FIXED";
   return {
     Version: 2,
     MinimumVersion: 2,
     Author: "makipom; converted for Mousecape",
-    Identifier: `${theme.identifier}${isStatic ? ".static" : ""}`,
-    CapeName: `${theme.name}${isStatic ? " STATIC" : ""}`,
-    CapeVersion: isStatic ? 2 : 1,
+    Identifier: `${theme.identifier}${isStatic ? ".static" : ""}${isFixed ? ".static-fixed" : ""}`,
+    CapeName: `${theme.name}${isStatic ? " STATIC" : ""}${isFixed ? " STATIC FIXED" : ""}`,
+    CapeVersion: isFixed ? 3 : isStatic ? 2 : 1,
     Cloud: false,
     HiDPI: true,
     Cursors: cursors,
@@ -540,11 +583,13 @@ function makeCape(theme, themeName, cursors, suffix) {
 function main() {
   const report = { hotspots: { Regular: {}, Millennium: {} }, animations: [] };
   const staticReport = { hotspots: { Regular: {}, Millennium: {} }, animations: [] };
+  const fixedReport = { hotspots: { Regular: {}, Millennium: {} }, animations: [] };
   const mapping = {};
 
   for (const [themeName, theme] of Object.entries(THEMES)) {
     const cursors = {};
     const staticCursors = {};
+    const fixedCursors = {};
     mapping[themeName] = {};
     for (const [role, fileName] of Object.entries(theme.files)) {
       const cursorId = MAC_CURSOR_IDS[role];
@@ -553,14 +598,26 @@ function main() {
       for (const alias of MAC_CURSOR_ID_ALIASES[role] || [cursorId]) {
         staticCursors[alias] = staticCursor;
       }
+      const fixedCursor = convertOne(themeName, role, fileName, theme, fixedReport, {
+        staticOnly: !ANIMATED_ROLES.has(role),
+        assetRoot: "converted_assets_static_fixed",
+        frameRoot: "generated_frames_static_fixed",
+      });
+      for (const alias of MAC_CURSOR_ID_FIXED[role] || [cursorId]) {
+        fixedCursors[alias] = fixedCursor;
+      }
       mapping[themeName][role] = {
         macCursorId: cursorId,
         staticMacCursorIds: MAC_CURSOR_ID_ALIASES[role] || [cursorId],
+        fixedMacCursorIds: MAC_CURSOR_ID_FIXED[role] || [cursorId],
+        fixedMode: ANIMATED_ROLES.has(role) ? "animated" : "static",
         sourceFile: fileName,
         convertedAssetDirectory: `converted_assets/${themeName}/${role}`,
         staticAssetDirectory: `converted_assets_static/${themeName}/${role}`,
+        fixedAssetDirectory: `converted_assets_static_fixed/${themeName}/${role}`,
         generatedFrameDirectory: `generated_frames/${themeName}/${role}`,
         staticFrameDirectory: `generated_frames_static/${themeName}/${role}`,
+        fixedFrameDirectory: `generated_frames_static_fixed/${themeName}/${role}`,
       };
     }
     fs.writeFileSync(
@@ -571,6 +628,10 @@ function main() {
       path.join(ROOT, "mousecape_output", `BlueArchive_${themeName}_STATIC.cape`),
       plist(makeCape(theme, themeName, staticCursors, "STATIC")),
     );
+    fs.writeFileSync(
+      path.join(ROOT, "mousecape_output", `BlueArchive_${themeName}_STATIC_FIXED.cape`),
+      plist(makeCape(theme, themeName, fixedCursors, "STATIC_FIXED")),
+    );
   }
 
   fs.writeFileSync(path.join(ROOT, "mapping.json"), JSON.stringify(mapping, null, 2) + "\n");
@@ -578,6 +639,8 @@ function main() {
   fs.writeFileSync(path.join(ROOT, "docs", "animation_report.json"), JSON.stringify(report.animations, null, 2) + "\n");
   fs.writeFileSync(path.join(ROOT, "docs", "hotspots_static.json"), JSON.stringify(staticReport.hotspots, null, 2) + "\n");
   fs.writeFileSync(path.join(ROOT, "docs", "animation_report_static.json"), JSON.stringify(staticReport.animations, null, 2) + "\n");
+  fs.writeFileSync(path.join(ROOT, "docs", "hotspots_static_fixed.json"), JSON.stringify(fixedReport.hotspots, null, 2) + "\n");
+  fs.writeFileSync(path.join(ROOT, "docs", "animation_report_static_fixed.json"), JSON.stringify(fixedReport.animations, null, 2) + "\n");
 }
 
 main();

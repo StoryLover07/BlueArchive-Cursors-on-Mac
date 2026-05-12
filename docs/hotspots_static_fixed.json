@@ -1,0 +1,226 @@
+{
+  "Regular": {
+    "Arrow": {
+      "sourceFile": "normal.cur",
+      "macCursorId": "com.apple.coregraphics.Arrow",
+      "hotspotX": 5,
+      "hotspotY": 2,
+      "pointsWide": 32,
+      "pointsHigh": 32,
+      "frameCount": 1,
+      "frameDurationSeconds": 1
+    },
+    "Text": {
+      "sourceFile": "text.ani",
+      "macCursorId": "com.apple.coregraphics.IBeam",
+      "hotspotX": 15,
+      "hotspotY": 15,
+      "pointsWide": 32,
+      "pointsHigh": 32,
+      "frameCount": 22,
+      "frameDurationSeconds": 0.05
+    },
+    "Wait": {
+      "sourceFile": "loading.ani",
+      "macCursorId": "com.apple.coregraphics.Wait",
+      "hotspotX": 15,
+      "hotspotY": 15,
+      "pointsWide": 32,
+      "pointsHigh": 32,
+      "frameCount": 13,
+      "frameDurationSeconds": 0.016666666666666666
+    },
+    "Link": {
+      "sourceFile": "link.cur",
+      "macCursorId": "com.apple.cursor.2",
+      "hotspotX": 5,
+      "hotspotY": 2,
+      "pointsWide": 32,
+      "pointsHigh": 32,
+      "frameCount": 1,
+      "frameDurationSeconds": 1
+    },
+    "Move": {
+      "sourceFile": "move.cur",
+      "macCursorId": "com.apple.coregraphics.Move",
+      "hotspotX": 15,
+      "hotspotY": 15,
+      "pointsWide": 32,
+      "pointsHigh": 32,
+      "frameCount": 1,
+      "frameDurationSeconds": 1
+    },
+    "Forbidden": {
+      "sourceFile": "block.cur",
+      "macCursorId": "com.apple.cursor.3",
+      "hotspotX": 15,
+      "hotspotY": 15,
+      "pointsWide": 32,
+      "pointsHigh": 32,
+      "frameCount": 1,
+      "frameDurationSeconds": 1
+    },
+    "Help": {
+      "sourceFile": "help.cur",
+      "macCursorId": "com.apple.cursor.40",
+      "hotspotX": 5,
+      "hotspotY": 2,
+      "pointsWide": 32,
+      "pointsHigh": 32,
+      "frameCount": 1,
+      "frameDurationSeconds": 1
+    },
+    "ResizeNS": {
+      "sourceFile": "resizeNS.cur",
+      "macCursorId": "com.apple.cursor.23",
+      "hotspotX": 15,
+      "hotspotY": 15,
+      "pointsWide": 32,
+      "pointsHigh": 32,
+      "frameCount": 1,
+      "frameDurationSeconds": 1
+    },
+    "ResizeEW": {
+      "sourceFile": "resizeWE.cur",
+      "macCursorId": "com.apple.cursor.19",
+      "hotspotX": 15,
+      "hotspotY": 15,
+      "pointsWide": 32,
+      "pointsHigh": 32,
+      "frameCount": 1,
+      "frameDurationSeconds": 1
+    },
+    "ResizeDiag1": {
+      "sourceFile": "resizeDIAG1.cur",
+      "macCursorId": "com.apple.cursor.34",
+      "hotspotX": 15,
+      "hotspotY": 15,
+      "pointsWide": 32,
+      "pointsHigh": 32,
+      "frameCount": 1,
+      "frameDurationSeconds": 1
+    },
+    "ResizeDiag2": {
+      "sourceFile": "resizeDIAG2.cur",
+      "macCursorId": "com.apple.cursor.30",
+      "hotspotX": 15,
+      "hotspotY": 15,
+      "pointsWide": 32,
+      "pointsHigh": 32,
+      "frameCount": 1,
+      "frameDurationSeconds": 1
+    }
+  },
+  "Millennium": {
+    "Arrow": {
+      "sourceFile": "millennium_base.cur",
+      "macCursorId": "com.apple.coregraphics.Arrow",
+      "hotspotX": 6,
+      "hotspotY": 10,
+      "pointsWide": 32,
+      "pointsHigh": 32,
+      "frameCount": 1,
+      "frameDurationSeconds": 1
+    },
+    "Text": {
+      "sourceFile": "millennium_text.ani",
+      "macCursorId": "com.apple.coregraphics.IBeam",
+      "hotspotX": 11,
+      "hotspotY": 19,
+      "pointsWide": 32,
+      "pointsHigh": 32,
+      "frameCount": 20,
+      "frameDurationSeconds": 0.06666666666666667
+    },
+    "Wait": {
+      "sourceFile": "millennium_loading_v1.ani",
+      "macCursorId": "com.apple.coregraphics.Wait",
+      "hotspotX": 15,
+      "hotspotY": 16,
+      "pointsWide": 32,
+      "pointsHigh": 32,
+      "frameCount": 24,
+      "frameDurationSeconds": 0.016666666666666666
+    },
+    "Link": {
+      "sourceFile": "millennium_link.cur",
+      "macCursorId": "com.apple.cursor.2",
+      "hotspotX": 6,
+      "hotspotY": 10,
+      "pointsWide": 32,
+      "pointsHigh": 32,
+      "frameCount": 1,
+      "frameDurationSeconds": 1
+    },
+    "Move": {
+      "sourceFile": "millennium_move.cur",
+      "macCursorId": "com.apple.coregraphics.Move",
+      "hotspotX": 15,
+      "hotspotY": 16,
+      "pointsWide": 32,
+      "pointsHigh": 32,
+      "frameCount": 1,
+      "frameDurationSeconds": 1
+    },
+    "Forbidden": {
+      "sourceFile": "millennium_block.cur",
+      "macCursorId": "com.apple.cursor.3",
+      "hotspotX": 15,
+      "hotspotY": 16,
+      "pointsWide": 32,
+      "pointsHigh": 32,
+      "frameCount": 1,
+      "frameDurationSeconds": 1
+    },
+    "Help": {
+      "sourceFile": "millennium_help_rio.cur",
+      "macCursorId": "com.apple.cursor.40",
+      "hotspotX": 6,
+      "hotspotY": 10,
+      "pointsWide": 32,
+      "pointsHigh": 32,
+      "frameCount": 1,
+      "frameDurationSeconds": 1
+    },
+    "ResizeNS": {
+      "sourceFile": "millennium_NS.cur",
+      "macCursorId": "com.apple.cursor.23",
+      "hotspotX": 15,
+      "hotspotY": 16,
+      "pointsWide": 32,
+      "pointsHigh": 32,
+      "frameCount": 1,
+      "frameDurationSeconds": 1
+    },
+    "ResizeEW": {
+      "sourceFile": "millennium_EW.cur",
+      "macCursorId": "com.apple.cursor.19",
+      "hotspotX": 15,
+      "hotspotY": 16,
+      "pointsWide": 32,
+      "pointsHigh": 32,
+      "frameCount": 1,
+      "frameDurationSeconds": 1
+    },
+    "ResizeDiag1": {
+      "sourceFile": "millennium_diag1.cur",
+      "macCursorId": "com.apple.cursor.34",
+      "hotspotX": 15,
+      "hotspotY": 16,
+      "pointsWide": 32,
+      "pointsHigh": 32,
+      "frameCount": 1,
+      "frameDurationSeconds": 1
+    },
+    "ResizeDiag2": {
+      "sourceFile": "millennium_diag2.cur",
+      "macCursorId": "com.apple.cursor.30",
+      "hotspotX": 15,
+      "hotspotY": 16,
+      "pointsWide": 32,
+      "pointsHigh": 32,
+      "frameCount": 1,
+      "frameDurationSeconds": 1
+    }
+  }
+}

@@ -8,16 +8,22 @@ No cursor art was redesigned. The conversion preserves the original `.cur` and `
 
 - `mousecape_output/BlueArchive_Regular_STATIC.cape`
 - `mousecape_output/BlueArchive_Millennium_STATIC.cape`
+- `mousecape_output/BlueArchive_Regular_STATIC_FIXED.cape`
+- `mousecape_output/BlueArchive_Millennium_STATIC_FIXED.cape`
 - `mousecape_output/BlueArchive_Regular.cape`
 - `mousecape_output/BlueArchive_Millennium.cape`
 - `converted_assets/Regular/`
 - `converted_assets/Millennium/`
 - `converted_assets_static/Regular/`
 - `converted_assets_static/Millennium/`
+- `converted_assets_static_fixed/Regular/`
+- `converted_assets_static_fixed/Millennium/`
 - `generated_frames/Regular/`
 - `generated_frames/Millennium/`
 - `generated_frames_static/Regular/`
 - `generated_frames_static/Millennium/`
+- `generated_frames_static_fixed/Regular/`
+- `generated_frames_static_fixed/Millennium/`
 - `mapping.json`
 - `docs/hotspots.json`
 - `docs/animation_report.md`
@@ -30,20 +36,20 @@ Recommended:
 
 Use the STATIC capes first:
 
-- `mousecape_output/BlueArchive_Regular_STATIC.cape`
-- `mousecape_output/BlueArchive_Millennium_STATIC.cape`
+- `mousecape_output/BlueArchive_Regular_STATIC_FIXED.cape`
+- `mousecape_output/BlueArchive_Millennium_STATIC_FIXED.cape`
 
-These disable animations and register additional macOS cursor aliases so Arrow, IBeam, Link, Wait, drag, and resize states are less likely to fall back or flicker.
+These keep only Text/IBeam and Loading/Wait animated. Arrow, Link, Move, Forbidden, Help, and Resize states are static single-frame entries. Resize entries intentionally use the same stable static-entry pattern that made Link/clickable hover reliable.
 
 1. Open Mousecape 1813.
 2. Use `File > Import Cape`.
-3. Select `mousecape_output/BlueArchive_Regular_STATIC.cape` or `mousecape_output/BlueArchive_Millennium_STATIC.cape`.
+3. Select `mousecape_output/BlueArchive_Regular_STATIC_FIXED.cape` or `mousecape_output/BlueArchive_Millennium_STATIC_FIXED.cape`.
 4. Select the imported cape in Mousecape.
 5. Click `Apply Cape`.
 
 To switch themes, select the other imported cape and click `Apply Cape` again.
 
-The non-static capes remain available, but they should be treated as experimental until the STATIC capes are confirmed stable on the target Mac.
+The earlier static and animated capes remain available, but they should be treated as fallback/experimental files until the `STATIC_FIXED` capes are confirmed stable on the target Mac.
 
 ## If Cape Import Fails
 
@@ -53,8 +59,8 @@ Manual assembly path:
 
 1. In Mousecape, create a new cape.
 2. Add each cursor role listed in `mapping.json`.
-3. For the recommended static build, drag the matching PNG from `converted_assets_static/<Theme>/<Role>/` into the cursor representation fields.
-4. Set hotspot, size, frame count, and frame duration from `docs/hotspots.json`.
+3. For the recommended fixed build, drag the matching PNG from `converted_assets_static_fixed/<Theme>/<Role>/` into the cursor representation fields.
+4. Set hotspot, size, frame count, and frame duration from `docs/hotspots_static_fixed.json`.
 5. For animated cursors, use the vertical frame sheet PNG and set the reported frame count/duration.
 
 Animated manual assets remain in `converted_assets/<Theme>/<Role>/`.
@@ -70,9 +76,19 @@ Retina support is included.
 
 ## Animation Status
 
-The recommended STATIC capes intentionally disable animations. Each cursor entry uses one stable image frame.
+The recommended `STATIC_FIXED` capes keep animation only for Text/IBeam and Loading/Wait.
 
-The non-static capes include animations where Mousecape can represent them.
+All other cursor roles are static single-frame entries:
+
+- Arrow / Normal
+- Link / Pointing hand / Clickable hover
+- Move
+- Forbidden / Block
+- Help
+- Resize NS
+- Resize EW
+- Resize Diagonal 1
+- Resize Diagonal 2
 
 - Mousecape animation uses a vertical frame sheet.
 - Mousecape supports one frame duration per cursor.
@@ -101,12 +117,14 @@ Completed:
 - Extracted PNG assets and animation frames.
 - Generated 1x and 2x assets.
 - Generated recommended STATIC Mousecape `.cape` plist files.
+- Generated recommended `STATIC_FIXED` Mousecape `.cape` plist files.
 - Generated experimental animated Mousecape `.cape` plist files.
 - Validated all `.cape` files with `plutil -lint`.
 - Verified representative PNG frame-sheet dimensions with `sips`.
 - Verified STATIC capes contain only `FrameCount=1` cursor entries.
 - Verified STATIC capes have no zero hotspot or point-size values.
 - Added macOS cursor aliases for Link, Wait/Busy, IBeam variants, drag/open/closed, and individual resize directions.
+- Verified `STATIC_FIXED` resize entries are single-frame entries with 1x and 2x assets.
 
 Still needs user-side runtime validation:
 

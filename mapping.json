@@ -6,11 +6,18 @@
         "com.apple.coregraphics.Arrow",
         "com.apple.coregraphics.ArrowCtx"
       ],
+      "fixedMacCursorIds": [
+        "com.apple.coregraphics.Arrow",
+        "com.apple.coregraphics.ArrowCtx"
+      ],
+      "fixedMode": "static",
       "sourceFile": "normal.cur",
       "convertedAssetDirectory": "converted_assets/Regular/Arrow",
       "staticAssetDirectory": "converted_assets_static/Regular/Arrow",
+      "fixedAssetDirectory": "converted_assets_static_fixed/Regular/Arrow",
       "generatedFrameDirectory": "generated_frames/Regular/Arrow",
-      "staticFrameDirectory": "generated_frames_static/Regular/Arrow"
+      "staticFrameDirectory": "generated_frames_static/Regular/Arrow",
+      "fixedFrameDirectory": "generated_frames_static_fixed/Regular/Arrow"
     },
     "Text": {
       "macCursorId": "com.apple.coregraphics.IBeam",
@@ -19,11 +26,18 @@
         "com.apple.coregraphics.IBeamXOR",
         "com.apple.cursor.26"
       ],
+      "fixedMacCursorIds": [
+        "com.apple.coregraphics.IBeam",
+        "com.apple.coregraphics.IBeamXOR"
+      ],
+      "fixedMode": "animated",
       "sourceFile": "text.ani",
       "convertedAssetDirectory": "converted_assets/Regular/Text",
       "staticAssetDirectory": "converted_assets_static/Regular/Text",
+      "fixedAssetDirectory": "converted_assets_static_fixed/Regular/Text",
       "generatedFrameDirectory": "generated_frames/Regular/Text",
-      "staticFrameDirectory": "generated_frames_static/Regular/Text"
+      "staticFrameDirectory": "generated_frames_static/Regular/Text",
+      "fixedFrameDirectory": "generated_frames_static_fixed/Regular/Text"
     },
     "Wait": {
       "macCursorId": "com.apple.coregraphics.Wait",
@@ -34,11 +48,18 @@
         "com.apple.cursor.15",
         "com.apple.cursor.16"
       ],
+      "fixedMacCursorIds": [
+        "com.apple.coregraphics.Wait",
+        "com.apple.cursor.4"
+      ],
+      "fixedMode": "animated",
       "sourceFile": "loading.ani",
       "convertedAssetDirectory": "converted_assets/Regular/Wait",
       "staticAssetDirectory": "converted_assets_static/Regular/Wait",
+      "fixedAssetDirectory": "converted_assets_static_fixed/Regular/Wait",
       "generatedFrameDirectory": "generated_frames/Regular/Wait",
-      "staticFrameDirectory": "generated_frames_static/Regular/Wait"
+      "staticFrameDirectory": "generated_frames_static/Regular/Wait",
+      "fixedFrameDirectory": "generated_frames_static_fixed/Regular/Wait"
     },
     "Link": {
       "macCursorId": "com.apple.cursor.2",
@@ -46,11 +67,18 @@
         "com.apple.cursor.2",
         "com.apple.cursor.13"
       ],
+      "fixedMacCursorIds": [
+        "com.apple.cursor.2",
+        "com.apple.cursor.13"
+      ],
+      "fixedMode": "static",
       "sourceFile": "link.cur",
       "convertedAssetDirectory": "converted_assets/Regular/Link",
       "staticAssetDirectory": "converted_assets_static/Regular/Link",
+      "fixedAssetDirectory": "converted_assets_static_fixed/Regular/Link",
       "generatedFrameDirectory": "generated_frames/Regular/Link",
-      "staticFrameDirectory": "generated_frames_static/Regular/Link"
+      "staticFrameDirectory": "generated_frames_static/Regular/Link",
+      "fixedFrameDirectory": "generated_frames_static_fixed/Regular/Link"
     },
     "Move": {
       "macCursorId": "com.apple.coregraphics.Move",
@@ -60,33 +88,51 @@
         "com.apple.cursor.12",
         "com.apple.cursor.39"
       ],
+      "fixedMacCursorIds": [
+        "com.apple.coregraphics.Move"
+      ],
+      "fixedMode": "static",
       "sourceFile": "move.cur",
       "convertedAssetDirectory": "converted_assets/Regular/Move",
       "staticAssetDirectory": "converted_assets_static/Regular/Move",
+      "fixedAssetDirectory": "converted_assets_static_fixed/Regular/Move",
       "generatedFrameDirectory": "generated_frames/Regular/Move",
-      "staticFrameDirectory": "generated_frames_static/Regular/Move"
+      "staticFrameDirectory": "generated_frames_static/Regular/Move",
+      "fixedFrameDirectory": "generated_frames_static_fixed/Regular/Move"
     },
     "Forbidden": {
       "macCursorId": "com.apple.cursor.3",
       "staticMacCursorIds": [
         "com.apple.cursor.3"
       ],
+      "fixedMacCursorIds": [
+        "com.apple.cursor.3"
+      ],
+      "fixedMode": "static",
       "sourceFile": "block.cur",
       "convertedAssetDirectory": "converted_assets/Regular/Forbidden",
       "staticAssetDirectory": "converted_assets_static/Regular/Forbidden",
+      "fixedAssetDirectory": "converted_assets_static_fixed/Regular/Forbidden",
       "generatedFrameDirectory": "generated_frames/Regular/Forbidden",
-      "staticFrameDirectory": "generated_frames_static/Regular/Forbidden"
+      "staticFrameDirectory": "generated_frames_static/Regular/Forbidden",
+      "fixedFrameDirectory": "generated_frames_static_fixed/Regular/Forbidden"
     },
     "Help": {
       "macCursorId": "com.apple.cursor.40",
       "staticMacCursorIds": [
         "com.apple.cursor.40"
       ],
+      "fixedMacCursorIds": [
+        "com.apple.cursor.40"
+      ],
+      "fixedMode": "static",
       "sourceFile": "help.cur",
       "convertedAssetDirectory": "converted_assets/Regular/Help",
       "staticAssetDirectory": "converted_assets_static/Regular/Help",
+      "fixedAssetDirectory": "converted_assets_static_fixed/Regular/Help",
       "generatedFrameDirectory": "generated_frames/Regular/Help",
-      "staticFrameDirectory": "generated_frames_static/Regular/Help"
+      "staticFrameDirectory": "generated_frames_static/Regular/Help",
+      "fixedFrameDirectory": "generated_frames_static_fixed/Regular/Help"
     },
     "ResizeNS": {
       "macCursorId": "com.apple.cursor.23",
@@ -98,11 +144,17 @@
         "com.apple.cursor.32",
         "com.apple.cursor.36"
       ],
+      "fixedMacCursorIds": [
+        "com.apple.cursor.23"
+      ],
+      "fixedMode": "static",
       "sourceFile": "resizeNS.cur",
       "convertedAssetDirectory": "converted_assets/Regular/ResizeNS",
       "staticAssetDirectory": "converted_assets_static/Regular/ResizeNS",
+      "fixedAssetDirectory": "converted_assets_static_fixed/Regular/ResizeNS",
       "generatedFrameDirectory": "generated_frames/Regular/ResizeNS",
-      "staticFrameDirectory": "generated_frames_static/Regular/ResizeNS"
+      "staticFrameDirectory": "generated_frames_static/Regular/ResizeNS",
+      "fixedFrameDirectory": "generated_frames_static_fixed/Regular/ResizeNS"
     },
     "ResizeEW": {
       "macCursorId": "com.apple.cursor.19",
@@ -114,11 +166,17 @@
         "com.apple.cursor.28",
         "com.apple.cursor.38"
       ],
+      "fixedMacCursorIds": [
+        "com.apple.cursor.19"
+      ],
+      "fixedMode": "static",
       "sourceFile": "resizeWE.cur",
       "convertedAssetDirectory": "converted_assets/Regular/ResizeEW",
       "staticAssetDirectory": "converted_assets_static/Regular/ResizeEW",
+      "fixedAssetDirectory": "converted_assets_static_fixed/Regular/ResizeEW",
       "generatedFrameDirectory": "generated_frames/Regular/ResizeEW",
-      "staticFrameDirectory": "generated_frames_static/Regular/ResizeEW"
+      "staticFrameDirectory": "generated_frames_static/Regular/ResizeEW",
+      "fixedFrameDirectory": "generated_frames_static_fixed/Regular/ResizeEW"
     },
     "ResizeDiag1": {
       "macCursorId": "com.apple.cursor.34",
@@ -127,11 +185,17 @@
         "com.apple.cursor.33",
         "com.apple.cursor.35"
       ],
+      "fixedMacCursorIds": [
+        "com.apple.cursor.34"
+      ],
+      "fixedMode": "static",
       "sourceFile": "resizeDIAG1.cur",
       "convertedAssetDirectory": "converted_assets/Regular/ResizeDiag1",
       "staticAssetDirectory": "converted_assets_static/Regular/ResizeDiag1",
+      "fixedAssetDirectory": "converted_assets_static_fixed/Regular/ResizeDiag1",
       "generatedFrameDirectory": "generated_frames/Regular/ResizeDiag1",
-      "staticFrameDirectory": "generated_frames_static/Regular/ResizeDiag1"
+      "staticFrameDirectory": "generated_frames_static/Regular/ResizeDiag1",
+      "fixedFrameDirectory": "generated_frames_static_fixed/Regular/ResizeDiag1"
     },
     "ResizeDiag2": {
       "macCursorId": "com.apple.cursor.30",
@@ -140,11 +204,17 @@
         "com.apple.cursor.29",
         "com.apple.cursor.37"
       ],
+      "fixedMacCursorIds": [
+        "com.apple.cursor.30"
+      ],
+      "fixedMode": "static",
       "sourceFile": "resizeDIAG2.cur",
       "convertedAssetDirectory": "converted_assets/Regular/ResizeDiag2",
       "staticAssetDirectory": "converted_assets_static/Regular/ResizeDiag2",
+      "fixedAssetDirectory": "converted_assets_static_fixed/Regular/ResizeDiag2",
       "generatedFrameDirectory": "generated_frames/Regular/ResizeDiag2",
-      "staticFrameDirectory": "generated_frames_static/Regular/ResizeDiag2"
+      "staticFrameDirectory": "generated_frames_static/Regular/ResizeDiag2",
+      "fixedFrameDirectory": "generated_frames_static_fixed/Regular/ResizeDiag2"
     }
   },
   "Millennium": {
@@ -154,11 +224,18 @@
         "com.apple.coregraphics.Arrow",
         "com.apple.coregraphics.ArrowCtx"
       ],
+      "fixedMacCursorIds": [
+        "com.apple.coregraphics.Arrow",
+        "com.apple.coregraphics.ArrowCtx"
+      ],
+      "fixedMode": "static",
       "sourceFile": "millennium_base.cur",
       "convertedAssetDirectory": "converted_assets/Millennium/Arrow",
       "staticAssetDirectory": "converted_assets_static/Millennium/Arrow",
+      "fixedAssetDirectory": "converted_assets_static_fixed/Millennium/Arrow",
       "generatedFrameDirectory": "generated_frames/Millennium/Arrow",
-      "staticFrameDirectory": "generated_frames_static/Millennium/Arrow"
+      "staticFrameDirectory": "generated_frames_static/Millennium/Arrow",
+      "fixedFrameDirectory": "generated_frames_static_fixed/Millennium/Arrow"
     },
     "Text": {
       "macCursorId": "com.apple.coregraphics.IBeam",
@@ -167,11 +244,18 @@
         "com.apple.coregraphics.IBeamXOR",
         "com.apple.cursor.26"
       ],
+      "fixedMacCursorIds": [
+        "com.apple.coregraphics.IBeam",
+        "com.apple.coregraphics.IBeamXOR"
+      ],
+      "fixedMode": "animated",
       "sourceFile": "millennium_text.ani",
       "convertedAssetDirectory": "converted_assets/Millennium/Text",
       "staticAssetDirectory": "converted_assets_static/Millennium/Text",
+      "fixedAssetDirectory": "converted_assets_static_fixed/Millennium/Text",
       "generatedFrameDirectory": "generated_frames/Millennium/Text",
-      "staticFrameDirectory": "generated_frames_static/Millennium/Text"
+      "staticFrameDirectory": "generated_frames_static/Millennium/Text",
+      "fixedFrameDirectory": "generated_frames_static_fixed/Millennium/Text"
     },
     "Wait": {
       "macCursorId": "com.apple.coregraphics.Wait",
@@ -182,11 +266,18 @@
         "com.apple.cursor.15",
         "com.apple.cursor.16"
       ],
+      "fixedMacCursorIds": [
+        "com.apple.coregraphics.Wait",
+        "com.apple.cursor.4"
+      ],
+      "fixedMode": "animated",
       "sourceFile": "millennium_loading_v1.ani",
       "convertedAssetDirectory": "converted_assets/Millennium/Wait",
       "staticAssetDirectory": "converted_assets_static/Millennium/Wait",
+      "fixedAssetDirectory": "converted_assets_static_fixed/Millennium/Wait",
       "generatedFrameDirectory": "generated_frames/Millennium/Wait",
-      "staticFrameDirectory": "generated_frames_static/Millennium/Wait"
+      "staticFrameDirectory": "generated_frames_static/Millennium/Wait",
+      "fixedFrameDirectory": "generated_frames_static_fixed/Millennium/Wait"
     },
     "Link": {
       "macCursorId": "com.apple.cursor.2",
@@ -194,11 +285,18 @@
         "com.apple.cursor.2",
         "com.apple.cursor.13"
       ],
+      "fixedMacCursorIds": [
+        "com.apple.cursor.2",
+        "com.apple.cursor.13"
+      ],
+      "fixedMode": "static",
       "sourceFile": "millennium_link.cur",
       "convertedAssetDirectory": "converted_assets/Millennium/Link",
       "staticAssetDirectory": "converted_assets_static/Millennium/Link",
+      "fixedAssetDirectory": "converted_assets_static_fixed/Millennium/Link",
       "generatedFrameDirectory": "generated_frames/Millennium/Link",
-      "staticFrameDirectory": "generated_frames_static/Millennium/Link"
+      "staticFrameDirectory": "generated_frames_static/Millennium/Link",
+      "fixedFrameDirectory": "generated_frames_static_fixed/Millennium/Link"
     },
     "Move": {
       "macCursorId": "com.apple.coregraphics.Move",
@@ -208,33 +306,51 @@
         "com.apple.cursor.12",
         "com.apple.cursor.39"
       ],
+      "fixedMacCursorIds": [
+        "com.apple.coregraphics.Move"
+      ],
+      "fixedMode": "static",
       "sourceFile": "millennium_move.cur",
       "convertedAssetDirectory": "converted_assets/Millennium/Move",
       "staticAssetDirectory": "converted_assets_static/Millennium/Move",
+      "fixedAssetDirectory": "converted_assets_static_fixed/Millennium/Move",
       "generatedFrameDirectory": "generated_frames/Millennium/Move",
-      "staticFrameDirectory": "generated_frames_static/Millennium/Move"
+      "staticFrameDirectory": "generated_frames_static/Millennium/Move",
+      "fixedFrameDirectory": "generated_frames_static_fixed/Millennium/Move"
     },
     "Forbidden": {
       "macCursorId": "com.apple.cursor.3",
       "staticMacCursorIds": [
         "com.apple.cursor.3"
       ],
+      "fixedMacCursorIds": [
+        "com.apple.cursor.3"
+      ],
+      "fixedMode": "static",
       "sourceFile": "millennium_block.cur",
       "convertedAssetDirectory": "converted_assets/Millennium/Forbidden",
       "staticAssetDirectory": "converted_assets_static/Millennium/Forbidden",
+      "fixedAssetDirectory": "converted_assets_static_fixed/Millennium/Forbidden",
       "generatedFrameDirectory": "generated_frames/Millennium/Forbidden",
-      "staticFrameDirectory": "generated_frames_static/Millennium/Forbidden"
+      "staticFrameDirectory": "generated_frames_static/Millennium/Forbidden",
+      "fixedFrameDirectory": "generated_frames_static_fixed/Millennium/Forbidden"
     },
     "Help": {
       "macCursorId": "com.apple.cursor.40",
       "staticMacCursorIds": [
         "com.apple.cursor.40"
       ],
+      "fixedMacCursorIds": [
+        "com.apple.cursor.40"
+      ],
+      "fixedMode": "static",
       "sourceFile": "millennium_help_rio.cur",
       "convertedAssetDirectory": "converted_assets/Millennium/Help",
       "staticAssetDirectory": "converted_assets_static/Millennium/Help",
+      "fixedAssetDirectory": "converted_assets_static_fixed/Millennium/Help",
       "generatedFrameDirectory": "generated_frames/Millennium/Help",
-      "staticFrameDirectory": "generated_frames_static/Millennium/Help"
+      "staticFrameDirectory": "generated_frames_static/Millennium/Help",
+      "fixedFrameDirectory": "generated_frames_static_fixed/Millennium/Help"
     },
     "ResizeNS": {
       "macCursorId": "com.apple.cursor.23",
@@ -246,11 +362,17 @@
         "com.apple.cursor.32",
         "com.apple.cursor.36"
       ],
+      "fixedMacCursorIds": [
+        "com.apple.cursor.23"
+      ],
+      "fixedMode": "static",
       "sourceFile": "millennium_NS.cur",
       "convertedAssetDirectory": "converted_assets/Millennium/ResizeNS",
       "staticAssetDirectory": "converted_assets_static/Millennium/ResizeNS",
+      "fixedAssetDirectory": "converted_assets_static_fixed/Millennium/ResizeNS",
       "generatedFrameDirectory": "generated_frames/Millennium/ResizeNS",
-      "staticFrameDirectory": "generated_frames_static/Millennium/ResizeNS"
+      "staticFrameDirectory": "generated_frames_static/Millennium/ResizeNS",
+      "fixedFrameDirectory": "generated_frames_static_fixed/Millennium/ResizeNS"
     },
     "ResizeEW": {
       "macCursorId": "com.apple.cursor.19",
@@ -262,11 +384,17 @@
         "com.apple.cursor.28",
         "com.apple.cursor.38"
       ],
+      "fixedMacCursorIds": [
+        "com.apple.cursor.19"
+      ],
+      "fixedMode": "static",
       "sourceFile": "millennium_EW.cur",
       "convertedAssetDirectory": "converted_assets/Millennium/ResizeEW",
       "staticAssetDirectory": "converted_assets_static/Millennium/ResizeEW",
+      "fixedAssetDirectory": "converted_assets_static_fixed/Millennium/ResizeEW",
       "generatedFrameDirectory": "generated_frames/Millennium/ResizeEW",
-      "staticFrameDirectory": "generated_frames_static/Millennium/ResizeEW"
+      "staticFrameDirectory": "generated_frames_static/Millennium/ResizeEW",
+      "fixedFrameDirectory": "generated_frames_static_fixed/Millennium/ResizeEW"
     },
     "ResizeDiag1": {
       "macCursorId": "com.apple.cursor.34",
@@ -275,11 +403,17 @@
         "com.apple.cursor.33",
         "com.apple.cursor.35"
       ],
+      "fixedMacCursorIds": [
+        "com.apple.cursor.34"
+      ],
+      "fixedMode": "static",
       "sourceFile": "millennium_diag1.cur",
       "convertedAssetDirectory": "converted_assets/Millennium/ResizeDiag1",
       "staticAssetDirectory": "converted_assets_static/Millennium/ResizeDiag1",
+      "fixedAssetDirectory": "converted_assets_static_fixed/Millennium/ResizeDiag1",
       "generatedFrameDirectory": "generated_frames/Millennium/ResizeDiag1",
-      "staticFrameDirectory": "generated_frames_static/Millennium/ResizeDiag1"
+      "staticFrameDirectory": "generated_frames_static/Millennium/ResizeDiag1",
+      "fixedFrameDirectory": "generated_frames_static_fixed/Millennium/ResizeDiag1"
     },
     "ResizeDiag2": {
       "macCursorId": "com.apple.cursor.30",
@@ -288,11 +422,17 @@
         "com.apple.cursor.29",
         "com.apple.cursor.37"
       ],
+      "fixedMacCursorIds": [
+        "com.apple.cursor.30"
+      ],
+      "fixedMode": "static",
       "sourceFile": "millennium_diag2.cur",
       "convertedAssetDirectory": "converted_assets/Millennium/ResizeDiag2",
       "staticAssetDirectory": "converted_assets_static/Millennium/ResizeDiag2",
+      "fixedAssetDirectory": "converted_assets_static_fixed/Millennium/ResizeDiag2",
       "generatedFrameDirectory": "generated_frames/Millennium/ResizeDiag2",
-      "staticFrameDirectory": "generated_frames_static/Millennium/ResizeDiag2"
+      "staticFrameDirectory": "generated_frames_static/Millennium/ResizeDiag2",
+      "fixedFrameDirectory": "generated_frames_static_fixed/Millennium/ResizeDiag2"
     }
   }
 }
