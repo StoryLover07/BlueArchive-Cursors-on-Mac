@@ -2,137 +2,297 @@
   "Regular": {
     "Arrow": {
       "macCursorId": "com.apple.coregraphics.Arrow",
+      "staticMacCursorIds": [
+        "com.apple.coregraphics.Arrow",
+        "com.apple.coregraphics.ArrowCtx"
+      ],
       "sourceFile": "normal.cur",
       "convertedAssetDirectory": "converted_assets/Regular/Arrow",
-      "generatedFrameDirectory": "generated_frames/Regular/Arrow"
+      "staticAssetDirectory": "converted_assets_static/Regular/Arrow",
+      "generatedFrameDirectory": "generated_frames/Regular/Arrow",
+      "staticFrameDirectory": "generated_frames_static/Regular/Arrow"
     },
     "Text": {
       "macCursorId": "com.apple.coregraphics.IBeam",
+      "staticMacCursorIds": [
+        "com.apple.coregraphics.IBeam",
+        "com.apple.coregraphics.IBeamXOR",
+        "com.apple.cursor.26"
+      ],
       "sourceFile": "text.ani",
       "convertedAssetDirectory": "converted_assets/Regular/Text",
-      "generatedFrameDirectory": "generated_frames/Regular/Text"
+      "staticAssetDirectory": "converted_assets_static/Regular/Text",
+      "generatedFrameDirectory": "generated_frames/Regular/Text",
+      "staticFrameDirectory": "generated_frames_static/Regular/Text"
     },
     "Wait": {
       "macCursorId": "com.apple.coregraphics.Wait",
+      "staticMacCursorIds": [
+        "com.apple.coregraphics.Wait",
+        "com.apple.cursor.4",
+        "com.apple.cursor.14",
+        "com.apple.cursor.15",
+        "com.apple.cursor.16"
+      ],
       "sourceFile": "loading.ani",
       "convertedAssetDirectory": "converted_assets/Regular/Wait",
-      "generatedFrameDirectory": "generated_frames/Regular/Wait"
+      "staticAssetDirectory": "converted_assets_static/Regular/Wait",
+      "generatedFrameDirectory": "generated_frames/Regular/Wait",
+      "staticFrameDirectory": "generated_frames_static/Regular/Wait"
     },
     "Link": {
       "macCursorId": "com.apple.cursor.2",
+      "staticMacCursorIds": [
+        "com.apple.cursor.2",
+        "com.apple.cursor.13"
+      ],
       "sourceFile": "link.cur",
       "convertedAssetDirectory": "converted_assets/Regular/Link",
-      "generatedFrameDirectory": "generated_frames/Regular/Link"
+      "staticAssetDirectory": "converted_assets_static/Regular/Link",
+      "generatedFrameDirectory": "generated_frames/Regular/Link",
+      "staticFrameDirectory": "generated_frames_static/Regular/Link"
     },
     "Move": {
       "macCursorId": "com.apple.coregraphics.Move",
+      "staticMacCursorIds": [
+        "com.apple.coregraphics.Move",
+        "com.apple.cursor.11",
+        "com.apple.cursor.12",
+        "com.apple.cursor.39"
+      ],
       "sourceFile": "move.cur",
       "convertedAssetDirectory": "converted_assets/Regular/Move",
-      "generatedFrameDirectory": "generated_frames/Regular/Move"
+      "staticAssetDirectory": "converted_assets_static/Regular/Move",
+      "generatedFrameDirectory": "generated_frames/Regular/Move",
+      "staticFrameDirectory": "generated_frames_static/Regular/Move"
     },
     "Forbidden": {
       "macCursorId": "com.apple.cursor.3",
+      "staticMacCursorIds": [
+        "com.apple.cursor.3"
+      ],
       "sourceFile": "block.cur",
       "convertedAssetDirectory": "converted_assets/Regular/Forbidden",
-      "generatedFrameDirectory": "generated_frames/Regular/Forbidden"
+      "staticAssetDirectory": "converted_assets_static/Regular/Forbidden",
+      "generatedFrameDirectory": "generated_frames/Regular/Forbidden",
+      "staticFrameDirectory": "generated_frames_static/Regular/Forbidden"
     },
     "Help": {
       "macCursorId": "com.apple.cursor.40",
+      "staticMacCursorIds": [
+        "com.apple.cursor.40"
+      ],
       "sourceFile": "help.cur",
       "convertedAssetDirectory": "converted_assets/Regular/Help",
-      "generatedFrameDirectory": "generated_frames/Regular/Help"
+      "staticAssetDirectory": "converted_assets_static/Regular/Help",
+      "generatedFrameDirectory": "generated_frames/Regular/Help",
+      "staticFrameDirectory": "generated_frames_static/Regular/Help"
     },
     "ResizeNS": {
       "macCursorId": "com.apple.cursor.23",
+      "staticMacCursorIds": [
+        "com.apple.cursor.23",
+        "com.apple.cursor.21",
+        "com.apple.cursor.22",
+        "com.apple.cursor.31",
+        "com.apple.cursor.32",
+        "com.apple.cursor.36"
+      ],
       "sourceFile": "resizeNS.cur",
       "convertedAssetDirectory": "converted_assets/Regular/ResizeNS",
-      "generatedFrameDirectory": "generated_frames/Regular/ResizeNS"
+      "staticAssetDirectory": "converted_assets_static/Regular/ResizeNS",
+      "generatedFrameDirectory": "generated_frames/Regular/ResizeNS",
+      "staticFrameDirectory": "generated_frames_static/Regular/ResizeNS"
     },
     "ResizeEW": {
       "macCursorId": "com.apple.cursor.19",
+      "staticMacCursorIds": [
+        "com.apple.cursor.19",
+        "com.apple.cursor.17",
+        "com.apple.cursor.18",
+        "com.apple.cursor.27",
+        "com.apple.cursor.28",
+        "com.apple.cursor.38"
+      ],
       "sourceFile": "resizeWE.cur",
       "convertedAssetDirectory": "converted_assets/Regular/ResizeEW",
-      "generatedFrameDirectory": "generated_frames/Regular/ResizeEW"
+      "staticAssetDirectory": "converted_assets_static/Regular/ResizeEW",
+      "generatedFrameDirectory": "generated_frames/Regular/ResizeEW",
+      "staticFrameDirectory": "generated_frames_static/Regular/ResizeEW"
     },
     "ResizeDiag1": {
       "macCursorId": "com.apple.cursor.34",
+      "staticMacCursorIds": [
+        "com.apple.cursor.34",
+        "com.apple.cursor.33",
+        "com.apple.cursor.35"
+      ],
       "sourceFile": "resizeDIAG1.cur",
       "convertedAssetDirectory": "converted_assets/Regular/ResizeDiag1",
-      "generatedFrameDirectory": "generated_frames/Regular/ResizeDiag1"
+      "staticAssetDirectory": "converted_assets_static/Regular/ResizeDiag1",
+      "generatedFrameDirectory": "generated_frames/Regular/ResizeDiag1",
+      "staticFrameDirectory": "generated_frames_static/Regular/ResizeDiag1"
     },
     "ResizeDiag2": {
       "macCursorId": "com.apple.cursor.30",
+      "staticMacCursorIds": [
+        "com.apple.cursor.30",
+        "com.apple.cursor.29",
+        "com.apple.cursor.37"
+      ],
       "sourceFile": "resizeDIAG2.cur",
       "convertedAssetDirectory": "converted_assets/Regular/ResizeDiag2",
-      "generatedFrameDirectory": "generated_frames/Regular/ResizeDiag2"
+      "staticAssetDirectory": "converted_assets_static/Regular/ResizeDiag2",
+      "generatedFrameDirectory": "generated_frames/Regular/ResizeDiag2",
+      "staticFrameDirectory": "generated_frames_static/Regular/ResizeDiag2"
     }
   },
   "Millennium": {
     "Arrow": {
       "macCursorId": "com.apple.coregraphics.Arrow",
+      "staticMacCursorIds": [
+        "com.apple.coregraphics.Arrow",
+        "com.apple.coregraphics.ArrowCtx"
+      ],
       "sourceFile": "millennium_base.cur",
       "convertedAssetDirectory": "converted_assets/Millennium/Arrow",
-      "generatedFrameDirectory": "generated_frames/Millennium/Arrow"
+      "staticAssetDirectory": "converted_assets_static/Millennium/Arrow",
+      "generatedFrameDirectory": "generated_frames/Millennium/Arrow",
+      "staticFrameDirectory": "generated_frames_static/Millennium/Arrow"
     },
     "Text": {
       "macCursorId": "com.apple.coregraphics.IBeam",
+      "staticMacCursorIds": [
+        "com.apple.coregraphics.IBeam",
+        "com.apple.coregraphics.IBeamXOR",
+        "com.apple.cursor.26"
+      ],
       "sourceFile": "millennium_text.ani",
       "convertedAssetDirectory": "converted_assets/Millennium/Text",
-      "generatedFrameDirectory": "generated_frames/Millennium/Text"
+      "staticAssetDirectory": "converted_assets_static/Millennium/Text",
+      "generatedFrameDirectory": "generated_frames/Millennium/Text",
+      "staticFrameDirectory": "generated_frames_static/Millennium/Text"
     },
     "Wait": {
       "macCursorId": "com.apple.coregraphics.Wait",
+      "staticMacCursorIds": [
+        "com.apple.coregraphics.Wait",
+        "com.apple.cursor.4",
+        "com.apple.cursor.14",
+        "com.apple.cursor.15",
+        "com.apple.cursor.16"
+      ],
       "sourceFile": "millennium_loading_v1.ani",
       "convertedAssetDirectory": "converted_assets/Millennium/Wait",
-      "generatedFrameDirectory": "generated_frames/Millennium/Wait"
+      "staticAssetDirectory": "converted_assets_static/Millennium/Wait",
+      "generatedFrameDirectory": "generated_frames/Millennium/Wait",
+      "staticFrameDirectory": "generated_frames_static/Millennium/Wait"
     },
     "Link": {
       "macCursorId": "com.apple.cursor.2",
+      "staticMacCursorIds": [
+        "com.apple.cursor.2",
+        "com.apple.cursor.13"
+      ],
       "sourceFile": "millennium_link.cur",
       "convertedAssetDirectory": "converted_assets/Millennium/Link",
-      "generatedFrameDirectory": "generated_frames/Millennium/Link"
+      "staticAssetDirectory": "converted_assets_static/Millennium/Link",
+      "generatedFrameDirectory": "generated_frames/Millennium/Link",
+      "staticFrameDirectory": "generated_frames_static/Millennium/Link"
     },
     "Move": {
       "macCursorId": "com.apple.coregraphics.Move",
+      "staticMacCursorIds": [
+        "com.apple.coregraphics.Move",
+        "com.apple.cursor.11",
+        "com.apple.cursor.12",
+        "com.apple.cursor.39"
+      ],
       "sourceFile": "millennium_move.cur",
       "convertedAssetDirectory": "converted_assets/Millennium/Move",
-      "generatedFrameDirectory": "generated_frames/Millennium/Move"
+      "staticAssetDirectory": "converted_assets_static/Millennium/Move",
+      "generatedFrameDirectory": "generated_frames/Millennium/Move",
+      "staticFrameDirectory": "generated_frames_static/Millennium/Move"
     },
     "Forbidden": {
       "macCursorId": "com.apple.cursor.3",
+      "staticMacCursorIds": [
+        "com.apple.cursor.3"
+      ],
       "sourceFile": "millennium_block.cur",
       "convertedAssetDirectory": "converted_assets/Millennium/Forbidden",
-      "generatedFrameDirectory": "generated_frames/Millennium/Forbidden"
+      "staticAssetDirectory": "converted_assets_static/Millennium/Forbidden",
+      "generatedFrameDirectory": "generated_frames/Millennium/Forbidden",
+      "staticFrameDirectory": "generated_frames_static/Millennium/Forbidden"
     },
     "Help": {
       "macCursorId": "com.apple.cursor.40",
+      "staticMacCursorIds": [
+        "com.apple.cursor.40"
+      ],
       "sourceFile": "millennium_help_rio.cur",
       "convertedAssetDirectory": "converted_assets/Millennium/Help",
-      "generatedFrameDirectory": "generated_frames/Millennium/Help"
+      "staticAssetDirectory": "converted_assets_static/Millennium/Help",
+      "generatedFrameDirectory": "generated_frames/Millennium/Help",
+      "staticFrameDirectory": "generated_frames_static/Millennium/Help"
     },
     "ResizeNS": {
       "macCursorId": "com.apple.cursor.23",
+      "staticMacCursorIds": [
+        "com.apple.cursor.23",
+        "com.apple.cursor.21",
+        "com.apple.cursor.22",
+        "com.apple.cursor.31",
+        "com.apple.cursor.32",
+        "com.apple.cursor.36"
+      ],
       "sourceFile": "millennium_NS.cur",
       "convertedAssetDirectory": "converted_assets/Millennium/ResizeNS",
-      "generatedFrameDirectory": "generated_frames/Millennium/ResizeNS"
+      "staticAssetDirectory": "converted_assets_static/Millennium/ResizeNS",
+      "generatedFrameDirectory": "generated_frames/Millennium/ResizeNS",
+      "staticFrameDirectory": "generated_frames_static/Millennium/ResizeNS"
     },
     "ResizeEW": {
       "macCursorId": "com.apple.cursor.19",
+      "staticMacCursorIds": [
+        "com.apple.cursor.19",
+        "com.apple.cursor.17",
+        "com.apple.cursor.18",
+        "com.apple.cursor.27",
+        "com.apple.cursor.28",
+        "com.apple.cursor.38"
+      ],
       "sourceFile": "millennium_EW.cur",
       "convertedAssetDirectory": "converted_assets/Millennium/ResizeEW",
-      "generatedFrameDirectory": "generated_frames/Millennium/ResizeEW"
+      "staticAssetDirectory": "converted_assets_static/Millennium/ResizeEW",
+      "generatedFrameDirectory": "generated_frames/Millennium/ResizeEW",
+      "staticFrameDirectory": "generated_frames_static/Millennium/ResizeEW"
     },
     "ResizeDiag1": {
       "macCursorId": "com.apple.cursor.34",
+      "staticMacCursorIds": [
+        "com.apple.cursor.34",
+        "com.apple.cursor.33",
+        "com.apple.cursor.35"
+      ],
       "sourceFile": "millennium_diag1.cur",
       "convertedAssetDirectory": "converted_assets/Millennium/ResizeDiag1",
-      "generatedFrameDirectory": "generated_frames/Millennium/ResizeDiag1"
+      "staticAssetDirectory": "converted_assets_static/Millennium/ResizeDiag1",
+      "generatedFrameDirectory": "generated_frames/Millennium/ResizeDiag1",
+      "staticFrameDirectory": "generated_frames_static/Millennium/ResizeDiag1"
     },
     "ResizeDiag2": {
       "macCursorId": "com.apple.cursor.30",
+      "staticMacCursorIds": [
+        "com.apple.cursor.30",
+        "com.apple.cursor.29",
+        "com.apple.cursor.37"
+      ],
       "sourceFile": "millennium_diag2.cur",
       "convertedAssetDirectory": "converted_assets/Millennium/ResizeDiag2",
-      "generatedFrameDirectory": "generated_frames/Millennium/ResizeDiag2"
+      "staticAssetDirectory": "converted_assets_static/Millennium/ResizeDiag2",
+      "generatedFrameDirectory": "generated_frames/Millennium/ResizeDiag2",
+      "staticFrameDirectory": "generated_frames_static/Millennium/ResizeDiag2"
     }
   }
 }

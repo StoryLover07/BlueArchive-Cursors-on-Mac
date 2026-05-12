@@ -22,6 +22,67 @@ const MAC_CURSOR_IDS = {
   ResizeDiag2: "com.apple.cursor.30",
 };
 
+const MAC_CURSOR_ID_ALIASES = {
+  Arrow: [
+    "com.apple.coregraphics.Arrow",
+    "com.apple.coregraphics.ArrowCtx",
+  ],
+  Text: [
+    "com.apple.coregraphics.IBeam",
+    "com.apple.coregraphics.IBeamXOR",
+    "com.apple.cursor.26",
+  ],
+  Wait: [
+    "com.apple.coregraphics.Wait",
+    "com.apple.cursor.4",
+    "com.apple.cursor.14",
+    "com.apple.cursor.15",
+    "com.apple.cursor.16",
+  ],
+  Link: [
+    "com.apple.cursor.2",
+    "com.apple.cursor.13",
+  ],
+  Move: [
+    "com.apple.coregraphics.Move",
+    "com.apple.cursor.11",
+    "com.apple.cursor.12",
+    "com.apple.cursor.39",
+  ],
+  Forbidden: [
+    "com.apple.cursor.3",
+  ],
+  Help: [
+    "com.apple.cursor.40",
+  ],
+  ResizeNS: [
+    "com.apple.cursor.23",
+    "com.apple.cursor.21",
+    "com.apple.cursor.22",
+    "com.apple.cursor.31",
+    "com.apple.cursor.32",
+    "com.apple.cursor.36",
+  ],
+  ResizeEW: [
+    "com.apple.cursor.19",
+    "com.apple.cursor.17",
+    "com.apple.cursor.18",
+    "com.apple.cursor.27",
+    "com.apple.cursor.28",
+    "com.apple.cursor.38",
+  ],
+  ResizeDiag1: [
+    "com.apple.cursor.34",
+    "com.apple.cursor.33",
+    "com.apple.cursor.35",
+  ],
+  ResizeDiag2: [
+    "com.apple.cursor.30",
+    "com.apple.cursor.29",
+    "com.apple.cursor.37",
+  ],
+};
+
 const THEMES = {
   Regular: {
     name: "Blue Archive Regular",
@@ -356,11 +417,13 @@ function plist(dictionary) {
   return `<?xml version="1.0" encoding="UTF-8"?>\n<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">\n<plist version="1.0">\n${writePlistValue(dictionary, "")}</plist>\n`;
 }
 
-function convertOne(themeName, role, fileName, theme, report) {
+function convertOne(themeName, role, fileName, theme, report, options = {}) {
   const src = path.join(theme.base, fileName);
   const ext = path.extname(fileName).toLowerCase();
-  const assetDir = path.join(ROOT, "converted_assets", themeName, role);
-  const frameDir = path.join(ROOT, "generated_frames", themeName, role);
+  const assetRoot = options.staticOnly ? "converted_assets_static" : "converted_assets";
+  const frameRoot = options.staticOnly ? "generated_frames_static" : "generated_frames";
+  const assetDir = path.join(ROOT, assetRoot, themeName, role);
+  const frameDir = path.join(ROOT, frameRoot, themeName, role);
   ensureDir(assetDir);
   ensureDir(frameDir);
 
@@ -397,6 +460,13 @@ function convertOne(themeName, role, fileName, theme, report) {
     }
   }
 
+  if (options.staticOnly && frames.length > 1) {
+    frames = [frames[0]];
+    frameDuration = 1;
+    status = "static-disabled";
+    note = "Animation disabled for STATIC cape compatibility; first source frame is used.";
+  }
+
   frames.forEach((frame, index) => {
     fs.writeFileSync(path.join(frameDir, `${String(index + 1).padStart(3, "0")}.png`), pngEncode(frame));
     fs.writeFileSync(path.join(frameDir, `${String(index + 1).padStart(3, "0")}@2x.png`), pngEncode(retinaFrame(frame)));
@@ -423,6 +493,7 @@ function convertOne(themeName, role, fileName, theme, report) {
   };
   report.animations.push({
     theme: themeName,
+    output: options.staticOnly ? "STATIC" : "animated",
     role,
     sourceFile: fileName,
     sourceFrameCount,
@@ -451,41 +522,62 @@ function retinaFrame(frame) {
   return scaleImageNearest(frame, 2);
 }
 
+function makeCape(theme, themeName, cursors, suffix) {
+  const isStatic = suffix === "STATIC";
+  return {
+    Version: 2,
+    MinimumVersion: 2,
+    Author: "makipom; converted for Mousecape",
+    Identifier: `${theme.identifier}${isStatic ? ".static" : ""}`,
+    CapeName: `${theme.name}${isStatic ? " STATIC" : ""}`,
+    CapeVersion: isStatic ? 2 : 1,
+    Cloud: false,
+    HiDPI: true,
+    Cursors: cursors,
+  };
+}
+
 function main() {
   const report = { hotspots: { Regular: {}, Millennium: {} }, animations: [] };
+  const staticReport = { hotspots: { Regular: {}, Millennium: {} }, animations: [] };
   const mapping = {};
 
   for (const [themeName, theme] of Object.entries(THEMES)) {
     const cursors = {};
+    const staticCursors = {};
     mapping[themeName] = {};
     for (const [role, fileName] of Object.entries(theme.files)) {
       const cursorId = MAC_CURSOR_IDS[role];
       cursors[cursorId] = convertOne(themeName, role, fileName, theme, report);
+      const staticCursor = convertOne(themeName, role, fileName, theme, staticReport, { staticOnly: true });
+      for (const alias of MAC_CURSOR_ID_ALIASES[role] || [cursorId]) {
+        staticCursors[alias] = staticCursor;
+      }
       mapping[themeName][role] = {
         macCursorId: cursorId,
+        staticMacCursorIds: MAC_CURSOR_ID_ALIASES[role] || [cursorId],
         sourceFile: fileName,
         convertedAssetDirectory: `converted_assets/${themeName}/${role}`,
+        staticAssetDirectory: `converted_assets_static/${themeName}/${role}`,
         generatedFrameDirectory: `generated_frames/${themeName}/${role}`,
+        staticFrameDirectory: `generated_frames_static/${themeName}/${role}`,
       };
     }
-    const cape = {
-      Version: 2,
-      MinimumVersion: 2,
-      Author: "makipom; converted for Mousecape",
-      Identifier: theme.identifier,
-      CapeName: theme.name,
-      CapeVersion: 1,
-      Cloud: false,
-      HiDPI: true,
-      Cursors: cursors,
-    };
-    const out = path.join(ROOT, "mousecape_output", `BlueArchive_${themeName}.cape`);
-    fs.writeFileSync(out, plist(cape));
+    fs.writeFileSync(
+      path.join(ROOT, "mousecape_output", `BlueArchive_${themeName}.cape`),
+      plist(makeCape(theme, themeName, cursors, "animated")),
+    );
+    fs.writeFileSync(
+      path.join(ROOT, "mousecape_output", `BlueArchive_${themeName}_STATIC.cape`),
+      plist(makeCape(theme, themeName, staticCursors, "STATIC")),
+    );
   }
 
   fs.writeFileSync(path.join(ROOT, "mapping.json"), JSON.stringify(mapping, null, 2) + "\n");
   fs.writeFileSync(path.join(ROOT, "docs", "hotspots.json"), JSON.stringify(report.hotspots, null, 2) + "\n");
   fs.writeFileSync(path.join(ROOT, "docs", "animation_report.json"), JSON.stringify(report.animations, null, 2) + "\n");
+  fs.writeFileSync(path.join(ROOT, "docs", "hotspots_static.json"), JSON.stringify(staticReport.hotspots, null, 2) + "\n");
+  fs.writeFileSync(path.join(ROOT, "docs", "animation_report_static.json"), JSON.stringify(staticReport.animations, null, 2) + "\n");
 }
 
 main();

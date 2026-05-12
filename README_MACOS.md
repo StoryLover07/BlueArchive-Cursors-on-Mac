@@ -6,12 +6,18 @@ No cursor art was redesigned. The conversion preserves the original `.cur` and `
 
 ## Deliverables
 
+- `mousecape_output/BlueArchive_Regular_STATIC.cape`
+- `mousecape_output/BlueArchive_Millennium_STATIC.cape`
 - `mousecape_output/BlueArchive_Regular.cape`
 - `mousecape_output/BlueArchive_Millennium.cape`
 - `converted_assets/Regular/`
 - `converted_assets/Millennium/`
+- `converted_assets_static/Regular/`
+- `converted_assets_static/Millennium/`
 - `generated_frames/Regular/`
 - `generated_frames/Millennium/`
+- `generated_frames_static/Regular/`
+- `generated_frames_static/Millennium/`
 - `mapping.json`
 - `docs/hotspots.json`
 - `docs/animation_report.md`
@@ -20,13 +26,24 @@ No cursor art was redesigned. The conversion preserves the original `.cur` and `
 
 ## Import Into Mousecape
 
+Recommended:
+
+Use the STATIC capes first:
+
+- `mousecape_output/BlueArchive_Regular_STATIC.cape`
+- `mousecape_output/BlueArchive_Millennium_STATIC.cape`
+
+These disable animations and register additional macOS cursor aliases so Arrow, IBeam, Link, Wait, drag, and resize states are less likely to fall back or flicker.
+
 1. Open Mousecape 1813.
 2. Use `File > Import Cape`.
-3. Select `mousecape_output/BlueArchive_Regular.cape` or `mousecape_output/BlueArchive_Millennium.cape`.
+3. Select `mousecape_output/BlueArchive_Regular_STATIC.cape` or `mousecape_output/BlueArchive_Millennium_STATIC.cape`.
 4. Select the imported cape in Mousecape.
 5. Click `Apply Cape`.
 
 To switch themes, select the other imported cape and click `Apply Cape` again.
+
+The non-static capes remain available, but they should be treated as experimental until the STATIC capes are confirmed stable on the target Mac.
 
 ## If Cape Import Fails
 
@@ -36,9 +53,11 @@ Manual assembly path:
 
 1. In Mousecape, create a new cape.
 2. Add each cursor role listed in `mapping.json`.
-3. Drag the matching PNG from `converted_assets/<Theme>/<Role>/` into the cursor representation fields.
+3. For the recommended static build, drag the matching PNG from `converted_assets_static/<Theme>/<Role>/` into the cursor representation fields.
 4. Set hotspot, size, frame count, and frame duration from `docs/hotspots.json`.
 5. For animated cursors, use the vertical frame sheet PNG and set the reported frame count/duration.
+
+Animated manual assets remain in `converted_assets/<Theme>/<Role>/`.
 
 ## Retina Support
 
@@ -51,7 +70,9 @@ Retina support is included.
 
 ## Animation Status
 
-Animations are included where Mousecape can represent them.
+The recommended STATIC capes intentionally disable animations. Each cursor entry uses one stable image frame.
+
+The non-static capes include animations where Mousecape can represent them.
 
 - Mousecape animation uses a vertical frame sheet.
 - Mousecape supports one frame duration per cursor.
@@ -79,9 +100,13 @@ Completed:
 - Parsed all required Regular and Millennium source cursors.
 - Extracted PNG assets and animation frames.
 - Generated 1x and 2x assets.
-- Generated Mousecape `.cape` plist files.
-- Validated both `.cape` files with `plutil -lint`.
+- Generated recommended STATIC Mousecape `.cape` plist files.
+- Generated experimental animated Mousecape `.cape` plist files.
+- Validated all `.cape` files with `plutil -lint`.
 - Verified representative PNG frame-sheet dimensions with `sips`.
+- Verified STATIC capes contain only `FrameCount=1` cursor entries.
+- Verified STATIC capes have no zero hotspot or point-size values.
+- Added macOS cursor aliases for Link, Wait/Busy, IBeam variants, drag/open/closed, and individual resize directions.
 
 Still needs user-side runtime validation:
 
@@ -99,4 +124,3 @@ node scripts/convert_cursors.js
 ```
 
 The script reads from `source_repos/BlueArchive-Cursors` and writes only generated output folders.
-

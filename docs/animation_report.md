@@ -2,6 +2,8 @@
 
 ## Summary
 
+Recommended use: import the STATIC capes first. The STATIC capes intentionally disable every animation and use only the first source frame for each animated cursor.
+
 - Regular `text.ani`: approximated. The source uses variable frame timing; Mousecape supports one frame duration per cursor, so the first rate was used.
 - Regular `loading.ani`: approximated. The source uses variable frame timing; Mousecape supports one frame duration per cursor, so the first rate was used.
 - Millennium `millennium_text.ani`: preserved. Constant timing, output frame count is within Mousecape's 24-frame limit.
@@ -17,3 +19,4 @@
 
 See `docs/animation_report.json` for exact frame counts, frame durations, source files, and status per cursor role.
 
+See `docs/animation_report_static.json` for the STATIC cape report. All STATIC animated sources are marked `static-disabled`.
