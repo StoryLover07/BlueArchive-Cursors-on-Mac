@@ -25,17 +25,18 @@ Static PNG assets are written to `converted_assets_static/` and `generated_frame
 
 ## Additional cursor aliases
 
-The STATIC capes include aliases for:
+The STATIC capes now use narrow aliases, modeled after the working Link cursor:
 
 - Arrow and context arrow.
-- IBeam, IBeamXOR, and horizontal IBeam.
+- IBeam and IBeamXOR.
 - Link and pointing hand.
-- Wait, busy, and counting cursors.
-- Move, open, closed, and resize-square drag states.
-- Resize N/S/E/W plus window resize variants.
-- Diagonal resize variants.
+- Wait and busy.
+- Move.
+- Forbidden.
+- Help.
+- Primary Resize NS, EW, Diagonal 1, and Diagonal 2.
 
-Each STATIC cape currently contains 36 cursor entries.
+Each STATIC cape currently contains 15 cursor entries.
 
 ## Recommended testing order
 
