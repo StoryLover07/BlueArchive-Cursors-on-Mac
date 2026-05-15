@@ -18,7 +18,7 @@
       "pointsWide": 32,
       "pointsHigh": 32,
       "frameCount": 22,
-      "frameDurationSeconds": 0.05
+      "frameDurationSeconds": 0.03636363636363636
     },
     "Wait": {
       "sourceFile": "loading.ani",
@@ -28,7 +28,7 @@
       "pointsWide": 32,
       "pointsHigh": 32,
       "frameCount": 13,
-      "frameDurationSeconds": 0.016666666666666666
+      "frameDurationSeconds": 0.028205128205128206
     },
     "Link": {
       "sourceFile": "link.cur",
@@ -140,7 +140,7 @@
       "pointsWide": 32,
       "pointsHigh": 32,
       "frameCount": 24,
-      "frameDurationSeconds": 0.016666666666666666
+      "frameDurationSeconds": 0.017361111111111112
     },
     "Link": {
       "sourceFile": "millennium_link.cur",

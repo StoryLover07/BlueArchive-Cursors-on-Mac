@@ -188,9 +188,7 @@
     "sourceFrameCount": 19,
     "outputFrameCount": 1,
     "frameDurationSeconds": 1,
-    "timingJiffies": [
-      4
-    ],
+    "timingJiffies": [],
     "status": "static-disabled",
     "note": "Animation disabled for STATIC cape compatibility; first source frame is used."
   },
@@ -202,9 +200,7 @@
     "sourceFrameCount": 25,
     "outputFrameCount": 1,
     "frameDurationSeconds": 1,
-    "timingJiffies": [
-      1
-    ],
+    "timingJiffies": [],
     "status": "static-disabled",
     "note": "Animation disabled for STATIC cape compatibility; first source frame is used."
   },
