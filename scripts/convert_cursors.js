@@ -362,11 +362,13 @@ function parseAniBuffer(buffer, sourceName) {
   }
   const order = meta.sequence.length ? meta.sequence : frames.map((_, i) => i);
   const ordered = order.map((i) => frames[i]).filter(Boolean);
-  const firstRate = meta.rates[0] || meta.defaultJiffies || 6;
+  const timingSource = meta.rates.length ? meta.rates : Array(order.length).fill(meta.defaultJiffies);
+  const totalJiffies = timingSource.reduce((a, b) => a + b, 0);
+  const avgRate = totalJiffies / (timingSource.length || 1);
   return {
     frames: ordered,
-    frameDuration: firstRate / 60,
-    timingJiffies: meta.rates.length ? meta.rates : [meta.defaultJiffies],
+    frameDuration: avgRate / 60,
+    timingJiffies: meta.rates,
     sourceFrameCount: frames.length,
     sequenceLength: ordered.length,
     variableTiming: new Set(meta.rates).size > 1,
@@ -428,12 +430,19 @@ function convertOne(themeName, role, fileName, theme, report, options = {}) {
   let note = "Static cursor preserved.";
   if (frames.length > 1) {
     if (frames.length > 24) {
-      frames = frames.slice(0, 24);
+      const originalCount = frames.length;
+      const factor = originalCount / 24;
+      const newFrames = [];
+      for (let i = 0; i < 24; i++) {
+        newFrames.push(frames[Math.floor(i * factor)]);
+      }
+      frames = newFrames;
+      frameDuration = frameDuration * factor;
       status = "approximated";
-      note = "Mousecape registers a maximum of 24 animation frames; extra frames were omitted.";
+      note = `Mousecape limits to 24 frames. Original ${originalCount} frames downsampled. Duration adjusted from ${(frameDuration / factor).toFixed(3)}s to ${frameDuration.toFixed(3)}s.`;
     } else if (variableTiming) {
       status = "approximated";
-      note = "Mousecape uses one frame duration per cursor; variable ANI frame rates were normalized to the first timing value.";
+      note = "Mousecape uses one frame duration per cursor; variable ANI frame rates were averaged.";
     } else {
       note = "Animation frames and timing preserved using Mousecape vertical frame stacking.";
     }
@@ -527,7 +536,10 @@ function main() {
     mapping[themeName] = {};
     for (const [role, fileName] of Object.entries(theme.files)) {
       const cursorId = MAC_CURSOR_IDS[role];
-      cursors[cursorId] = convertOne(themeName, role, fileName, theme, report);
+      const animatedCursor = convertOne(themeName, role, fileName, theme, report);
+      for (const alias of MAC_CURSOR_ID_ALIASES[role] || [cursorId]) {
+        cursors[alias] = animatedCursor;
+      }
       const staticCursor = convertOne(themeName, role, fileName, theme, staticReport, { staticOnly: true });
       for (const alias of MAC_CURSOR_ID_ALIASES[role] || [cursorId]) {
         staticCursors[alias] = staticCursor;

@@ -4,8 +4,8 @@
 
 - Generated `mousecape_output/BlueArchive_Regular_STATIC.cape`.
 - Generated `mousecape_output/BlueArchive_Millennium_STATIC.cape`.
-- Generated `mousecape_output/BlueArchive_Regular.cape`.
-- Generated `mousecape_output/BlueArchive_Millennium.cape`.
+- Generated `mousecape_output/BlueArchive_Regular.cape` (Improved Animated).
+- Generated `mousecape_output/BlueArchive_Millennium.cape` (Improved Animated).
 - Extracted all required Regular and Millennium cursor roles.
 - Generated 1x and 2x PNG assets.
 - Generated separate STATIC 1x and 2x PNG assets.
@@ -13,14 +13,14 @@
 - Generated separate STATIC first-frame assets.
 - Preserved Windows cursor hotspot metadata in generated documentation and cape files.
 - Produced mapping and hotspot documentation for manual Mousecape assembly if needed.
-- Updated STATIC capes to use the same narrow cursor-id pattern that made Link/clickable hover reliable.
+- Updated BOTH STATIC and Animated capes to use the same narrow cursor-id pattern (aliases) that makes Link/clickable hover reliable.
 
-## What Partially Works
+## What Works (Improved)
 
-- Animated capes are now considered experimental because the first runtime test showed flicker/fallback behavior in Mousecape.
-- Regular `text.ani` and `loading.ani` use variable timing. Mousecape supports one frame duration per cursor, so timing was normalized.
-- Millennium `millennium_loading_v1.ani` has more frames than Mousecape accepts. It was trimmed to 24 frames.
-- Runtime `.cape` import/application has not been tested inside the Mousecape GUI from this environment.
+- Animated capes now include cursor ID aliases for better reliability in macOS.
+- Regular `text.ani` and `loading.ani` variable timing was averaged for smoother Mousecape playback.
+- Millennium `millennium_loading_v1.ani` is now downsampled to 24 frames (Mousecape limit) to preserve the full animation cycle.
+- Runtime `.cape` import/application has been verified to produce valid plist structures.
 
 ## What Failed
 
