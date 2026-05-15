@@ -20,16 +20,19 @@ const MAC_CURSOR_IDS = {
   ResizeEW: "com.apple.cursor.19",
   ResizeDiag1: "com.apple.cursor.34",
   ResizeDiag2: "com.apple.cursor.30",
+  Background: "com.apple.cursor.10",
 };
 
 const MAC_CURSOR_ID_ALIASES = {
   Arrow: [
     "com.apple.coregraphics.Arrow",
     "com.apple.coregraphics.ArrowCtx",
+    "com.apple.cursor.1",
   ],
   Text: [
     "com.apple.coregraphics.IBeam",
     "com.apple.coregraphics.IBeamXOR",
+    "com.apple.cursor.0",
   ],
   Wait: [
     "com.apple.coregraphics.Wait",
@@ -38,27 +41,39 @@ const MAC_CURSOR_ID_ALIASES = {
   Link: [
     "com.apple.cursor.2",
     "com.apple.cursor.13",
+    "com.apple.cursor.15",
+    "com.apple.coregraphics.PointingHand",
   ],
   Move: [
     "com.apple.coregraphics.Move",
+    "com.apple.cursor.39",
   ],
   Forbidden: [
     "com.apple.cursor.3",
+    "com.apple.coregraphics.NotAllowed",
   ],
   Help: [
     "com.apple.cursor.40",
+    "com.apple.coregraphics.QuestionMark",
   ],
   ResizeNS: [
     "com.apple.cursor.23",
+    "com.apple.coregraphics.ResizeNS",
   ],
   ResizeEW: [
     "com.apple.cursor.19",
+    "com.apple.coregraphics.ResizeEW",
   ],
   ResizeDiag1: [
     "com.apple.cursor.34",
+    "com.apple.coregraphics.ResizeNWSE",
   ],
   ResizeDiag2: [
     "com.apple.cursor.30",
+    "com.apple.coregraphics.ResizeNESW",
+  ],
+  Background: [
+    "com.apple.cursor.10",
   ],
 };
 
@@ -534,7 +549,8 @@ function main() {
     const cursors = {};
     const staticCursors = {};
     mapping[themeName] = {};
-    for (const [role, fileName] of Object.entries(theme.files)) {
+    const allFiles = { ...theme.files, ...(theme.optional || {}) };
+    for (const [role, fileName] of Object.entries(allFiles)) {
       const cursorId = MAC_CURSOR_IDS[role];
       const animatedCursor = convertOne(themeName, role, fileName, theme, report);
       for (const alias of MAC_CURSOR_ID_ALIASES[role] || [cursorId]) {

@@ -4,7 +4,8 @@
       "macCursorId": "com.apple.coregraphics.Arrow",
       "staticMacCursorIds": [
         "com.apple.coregraphics.Arrow",
-        "com.apple.coregraphics.ArrowCtx"
+        "com.apple.coregraphics.ArrowCtx",
+        "com.apple.cursor.1"
       ],
       "sourceFile": "normal.cur",
       "convertedAssetDirectory": "converted_assets/Regular/Arrow",
@@ -16,7 +17,8 @@
       "macCursorId": "com.apple.coregraphics.IBeam",
       "staticMacCursorIds": [
         "com.apple.coregraphics.IBeam",
-        "com.apple.coregraphics.IBeamXOR"
+        "com.apple.coregraphics.IBeamXOR",
+        "com.apple.cursor.0"
       ],
       "sourceFile": "text.ani",
       "convertedAssetDirectory": "converted_assets/Regular/Text",
@@ -40,7 +42,9 @@
       "macCursorId": "com.apple.cursor.2",
       "staticMacCursorIds": [
         "com.apple.cursor.2",
-        "com.apple.cursor.13"
+        "com.apple.cursor.13",
+        "com.apple.cursor.15",
+        "com.apple.coregraphics.PointingHand"
       ],
       "sourceFile": "link.cur",
       "convertedAssetDirectory": "converted_assets/Regular/Link",
@@ -51,7 +55,8 @@
     "Move": {
       "macCursorId": "com.apple.coregraphics.Move",
       "staticMacCursorIds": [
-        "com.apple.coregraphics.Move"
+        "com.apple.coregraphics.Move",
+        "com.apple.cursor.39"
       ],
       "sourceFile": "move.cur",
       "convertedAssetDirectory": "converted_assets/Regular/Move",
@@ -62,7 +67,8 @@
     "Forbidden": {
       "macCursorId": "com.apple.cursor.3",
       "staticMacCursorIds": [
-        "com.apple.cursor.3"
+        "com.apple.cursor.3",
+        "com.apple.coregraphics.NotAllowed"
       ],
       "sourceFile": "block.cur",
       "convertedAssetDirectory": "converted_assets/Regular/Forbidden",
@@ -73,7 +79,8 @@
     "Help": {
       "macCursorId": "com.apple.cursor.40",
       "staticMacCursorIds": [
-        "com.apple.cursor.40"
+        "com.apple.cursor.40",
+        "com.apple.coregraphics.QuestionMark"
       ],
       "sourceFile": "help.cur",
       "convertedAssetDirectory": "converted_assets/Regular/Help",
@@ -84,7 +91,8 @@
     "ResizeNS": {
       "macCursorId": "com.apple.cursor.23",
       "staticMacCursorIds": [
-        "com.apple.cursor.23"
+        "com.apple.cursor.23",
+        "com.apple.coregraphics.ResizeNS"
       ],
       "sourceFile": "resizeNS.cur",
       "convertedAssetDirectory": "converted_assets/Regular/ResizeNS",
@@ -95,7 +103,8 @@
     "ResizeEW": {
       "macCursorId": "com.apple.cursor.19",
       "staticMacCursorIds": [
-        "com.apple.cursor.19"
+        "com.apple.cursor.19",
+        "com.apple.coregraphics.ResizeEW"
       ],
       "sourceFile": "resizeWE.cur",
       "convertedAssetDirectory": "converted_assets/Regular/ResizeEW",
@@ -106,7 +115,8 @@
     "ResizeDiag1": {
       "macCursorId": "com.apple.cursor.34",
       "staticMacCursorIds": [
-        "com.apple.cursor.34"
+        "com.apple.cursor.34",
+        "com.apple.coregraphics.ResizeNWSE"
       ],
       "sourceFile": "resizeDIAG1.cur",
       "convertedAssetDirectory": "converted_assets/Regular/ResizeDiag1",
@@ -117,7 +127,8 @@
     "ResizeDiag2": {
       "macCursorId": "com.apple.cursor.30",
       "staticMacCursorIds": [
-        "com.apple.cursor.30"
+        "com.apple.cursor.30",
+        "com.apple.coregraphics.ResizeNESW"
       ],
       "sourceFile": "resizeDIAG2.cur",
       "convertedAssetDirectory": "converted_assets/Regular/ResizeDiag2",
@@ -131,7 +142,8 @@
       "macCursorId": "com.apple.coregraphics.Arrow",
       "staticMacCursorIds": [
         "com.apple.coregraphics.Arrow",
-        "com.apple.coregraphics.ArrowCtx"
+        "com.apple.coregraphics.ArrowCtx",
+        "com.apple.cursor.1"
       ],
       "sourceFile": "millennium_base.cur",
       "convertedAssetDirectory": "converted_assets/Millennium/Arrow",
@@ -143,7 +155,8 @@
       "macCursorId": "com.apple.coregraphics.IBeam",
       "staticMacCursorIds": [
         "com.apple.coregraphics.IBeam",
-        "com.apple.coregraphics.IBeamXOR"
+        "com.apple.coregraphics.IBeamXOR",
+        "com.apple.cursor.0"
       ],
       "sourceFile": "millennium_text.ani",
       "convertedAssetDirectory": "converted_assets/Millennium/Text",
@@ -167,7 +180,9 @@
       "macCursorId": "com.apple.cursor.2",
       "staticMacCursorIds": [
         "com.apple.cursor.2",
-        "com.apple.cursor.13"
+        "com.apple.cursor.13",
+        "com.apple.cursor.15",
+        "com.apple.coregraphics.PointingHand"
       ],
       "sourceFile": "millennium_link.cur",
       "convertedAssetDirectory": "converted_assets/Millennium/Link",
@@ -178,7 +193,8 @@
     "Move": {
       "macCursorId": "com.apple.coregraphics.Move",
       "staticMacCursorIds": [
-        "com.apple.coregraphics.Move"
+        "com.apple.coregraphics.Move",
+        "com.apple.cursor.39"
       ],
       "sourceFile": "millennium_move.cur",
       "convertedAssetDirectory": "converted_assets/Millennium/Move",
@@ -189,7 +205,8 @@
     "Forbidden": {
       "macCursorId": "com.apple.cursor.3",
       "staticMacCursorIds": [
-        "com.apple.cursor.3"
+        "com.apple.cursor.3",
+        "com.apple.coregraphics.NotAllowed"
       ],
       "sourceFile": "millennium_block.cur",
       "convertedAssetDirectory": "converted_assets/Millennium/Forbidden",
@@ -200,7 +217,8 @@
     "Help": {
       "macCursorId": "com.apple.cursor.40",
       "staticMacCursorIds": [
-        "com.apple.cursor.40"
+        "com.apple.cursor.40",
+        "com.apple.coregraphics.QuestionMark"
       ],
       "sourceFile": "millennium_help_rio.cur",
       "convertedAssetDirectory": "converted_assets/Millennium/Help",
@@ -211,7 +229,8 @@
     "ResizeNS": {
       "macCursorId": "com.apple.cursor.23",
       "staticMacCursorIds": [
-        "com.apple.cursor.23"
+        "com.apple.cursor.23",
+        "com.apple.coregraphics.ResizeNS"
       ],
       "sourceFile": "millennium_NS.cur",
       "convertedAssetDirectory": "converted_assets/Millennium/ResizeNS",
@@ -222,7 +241,8 @@
     "ResizeEW": {
       "macCursorId": "com.apple.cursor.19",
       "staticMacCursorIds": [
-        "com.apple.cursor.19"
+        "com.apple.cursor.19",
+        "com.apple.coregraphics.ResizeEW"
       ],
       "sourceFile": "millennium_EW.cur",
       "convertedAssetDirectory": "converted_assets/Millennium/ResizeEW",
@@ -233,7 +253,8 @@
     "ResizeDiag1": {
       "macCursorId": "com.apple.cursor.34",
       "staticMacCursorIds": [
-        "com.apple.cursor.34"
+        "com.apple.cursor.34",
+        "com.apple.coregraphics.ResizeNWSE"
       ],
       "sourceFile": "millennium_diag1.cur",
       "convertedAssetDirectory": "converted_assets/Millennium/ResizeDiag1",
@@ -244,13 +265,25 @@
     "ResizeDiag2": {
       "macCursorId": "com.apple.cursor.30",
       "staticMacCursorIds": [
-        "com.apple.cursor.30"
+        "com.apple.cursor.30",
+        "com.apple.coregraphics.ResizeNESW"
       ],
       "sourceFile": "millennium_diag2.cur",
       "convertedAssetDirectory": "converted_assets/Millennium/ResizeDiag2",
       "staticAssetDirectory": "converted_assets_static/Millennium/ResizeDiag2",
       "generatedFrameDirectory": "generated_frames/Millennium/ResizeDiag2",
       "staticFrameDirectory": "generated_frames_static/Millennium/ResizeDiag2"
+    },
+    "Background": {
+      "macCursorId": "com.apple.cursor.10",
+      "staticMacCursorIds": [
+        "com.apple.cursor.10"
+      ],
+      "sourceFile": "millennium_background_aris.ani",
+      "convertedAssetDirectory": "converted_assets/Millennium/Background",
+      "staticAssetDirectory": "converted_assets_static/Millennium/Background",
+      "generatedFrameDirectory": "generated_frames/Millennium/Background",
+      "staticFrameDirectory": "generated_frames_static/Millennium/Background"
     }
   }
 }
