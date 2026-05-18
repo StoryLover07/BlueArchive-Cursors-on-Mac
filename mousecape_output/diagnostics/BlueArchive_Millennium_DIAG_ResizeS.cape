@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Author</key>
+  <string>makipom; diagnostic cape assembled from converted static output</string>
+  <key>CapeName</key>
+  <string>Blue Archive Millennium DIAG ResizeS</string>
+  <key>CapeVersion</key>
+  <integer>1</integer>
+  <key>Cloud</key>
+  <false/>
+  <key>Cursors</key>
+  <dict>
+    <key>com.apple.cursor.22</key>
+    <dict>
+          <key>HotSpotX</key>
+          <integer>15</integer>
+          <key>HotSpotY</key>
+          <integer>16</integer>
+          <key>PointsWide</key>
+          <integer>32</integer>
+          <key>PointsHigh</key>
+          <integer>32</integer>
+          <key>FrameCount</key>
+          <integer>1</integer>
+          <key>FrameDuration</key>
+          <integer>1</integer>
+          <key>Representations</key>
+          <array>
+            <data>
+              iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAA3UlEQVR4nO2WPQrCQBSE
+              l3Q5QYh97qDWOUW6wJwilzBdDuAB7FIEIVdImULBRkGygpjCjSZ5sv5A7OUFYT8Y2G4+
+              tnkjhOFfAeACWL7jspdHUVQWRUE6+h2G4YRToJRSkubeEe32R3Ic58ApQF1PVN+Izs0r
+              QghiEwiCgC6DcnYBz/O+ytkFLMvKV2lGwwghcjYBg8FgMBgA5Gm2Hu8Y6UHStCOeYy3Q
+              9iMLaEabZABqpdTzF/Q0259qsm275RSYJUmi9DKuKkmLOL76vj9nE/hIANgC2ACYspYb
+              fskDDQrc2HJs4GMAAAAASUVORK5CYII=
+            </data>
+            <data>
+              iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABmklEQVR4nO2av2rCUBTG
+              I4i74Oqe3cFd8xhdEi/S93BtO3TpIHTwOYRsXTr1FZqW0oLSv1qNySk35MJNaqCDmHLO
+              94MPQqb7/UjCgRzHAQAAAI6GUsqkp5Q6ydMz91ljlR8rpaiUMWsJ5fKTyYSm02kWfc1e
+              gl1+NptRGX1vNBqR7/unXAVUlk9ToiQlOju/oG63S67rXtd93oNj3vVy8W1CtIqJ3rdE
+              rxsix3FMeGELMMVNaTvsBejy37vfxUUICIIgK/9WUZ61AF2+3+9XFmcvYDgcUqvVkiug
+              0+lkxcQKaDabsgXk0x39JVwnwbqPAAAAAAAAAAAAAAAAAACAI5GvyNBgMKBGoyHyx0i2
+              H7BLhf4etxck9m2GiBLwFQsXsJa6ImOWpOJEuAD9FHxUfAdECNBsKl4DMQL0U7Da8zHk
+              LOBOC4iiqCBhbUkIb26zIandbn/Wfd6Dk0+CD1rCcrksSNDD0ePTM+lNMs/zXrhOggUJ
+              YRjSYrHIMp/Pzbr8Pdt1eWePhFJ4lzdYEq7y0jqXIsoDAAD4Z/wAcy1kctX0haEAAAAA
+              SUVORK5CYII=
+            </data>
+          </array>
+        </dict>
+  </dict>
+  <key>HiDPI</key>
+  <true/>
+  <key>Identifier</key>
+  <string>com.makipom.bluearchive.millennium.diagnostic.resizes</string>
+  <key>MinimumVersion</key>
+  <integer>2</integer>
+  <key>Version</key>
+  <integer>2</integer>
+</dict>
+</plist>

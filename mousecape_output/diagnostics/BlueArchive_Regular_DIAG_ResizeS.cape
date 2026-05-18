@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Author</key>
+  <string>makipom; diagnostic cape assembled from converted static output</string>
+  <key>CapeName</key>
+  <string>Blue Archive Regular DIAG ResizeS</string>
+  <key>CapeVersion</key>
+  <integer>1</integer>
+  <key>Cloud</key>
+  <false/>
+  <key>Cursors</key>
+  <dict>
+    <key>com.apple.cursor.22</key>
+    <dict>
+          <key>HotSpotX</key>
+          <integer>15</integer>
+          <key>HotSpotY</key>
+          <integer>15</integer>
+          <key>PointsWide</key>
+          <integer>32</integer>
+          <key>PointsHigh</key>
+          <integer>32</integer>
+          <key>FrameCount</key>
+          <integer>1</integer>
+          <key>FrameDuration</key>
+          <integer>1</integer>
+          <key>Representations</key>
+          <array>
+            <data>
+              iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAA9klEQVR4nGNgIB0wMjAw
+              sHL5T+TlL7msJNj01kiw5b0YGeaQDTg47ItEBBpeVAp1fL8g1PnjrlDnzwOCnT+MBTt/
+              MNLachYGBgZBgZpH+UJdP38Idf36j4RvCnX9VKK1A1gZGBhEBVs+zEGzHIaN6eEAccGW
+              96MOGHXAqANGHTDqgBHugC9fvsz5jx2MOmDUAaMOGHXAqANGhgPEBtoBwm/fvu379+/f
+              X2Sb//379+nv37+6tHYAqPPJNWnSJJmvX79u+vPnz4d///79/vv376M/f/4k//nzh5nW
+              DgABJlAPecuWLVKvXr3y//HjR9TXr18tyTUMAPCnmAj3ZQ+YAAAAAElFTkSuQmCC
+            </data>
+            <data>
+              iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABbUlEQVR4nO3bsUrDQBzH
+              8VYtlILYVK0gTt1dzOTkI3R39QEEcREcRDJYB8HMeQrJA/gIgpODSycJhBZJ8KK5q/yS
+              6yJUhNieeL8ffPf7f/ar1ea/uq6BWv3bVbR2+thDzmW8V+SNumgB71n4rAdooubByQZq
+              X7ycoc7V20PRQDyXZffIGQhXV0emH/8bsxZgReeg9vnwGHWuM1H2PpnRU1nWQ6aPqDLr
+              ARq6TeR44wB9c/jXXGT6iCojgG4LOd4oQAQgAAEIQAACEIAABCAAAQhAAAIQgAAEIAAB
+              CEAAAhDg/wMkSRKgyc/nItNHVBkBCEAAAhCAAAQgAAEIQAACEIAABCAAAQhAAAIQgAAW
+              AuArXJcAFgOsoziOb5BSSqJZVyulXpGUcheZPqLKrAeYfpltId/3d1Capncoz/MxUkp9
+              ICnlEOV5fqRbRqaPqDLrAaZb0hVfaMMw3EZRFPWREOIQpWm6j0w/dh770wCfduVgO0f0
+              oCMAAAAASUVORK5CYII=
+            </data>
+          </array>
+        </dict>
+  </dict>
+  <key>HiDPI</key>
+  <true/>
+  <key>Identifier</key>
+  <string>com.makipom.bluearchive.regular.diagnostic.resizes</string>
+  <key>MinimumVersion</key>
+  <integer>2</integer>
+  <key>Version</key>
+  <integer>2</integer>
+</dict>
+</plist>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Author</key>
+  <string>makipom; diagnostic cape assembled from converted static output</string>
+  <key>CapeName</key>
+  <string>Blue Archive Regular DIAG CountingUp</string>
+  <key>CapeVersion</key>
+  <integer>1</integer>
+  <key>Cloud</key>
+  <false/>
+  <key>Cursors</key>
+  <dict>
+    <key>com.apple.cursor.14</key>
+    <dict>
+          <key>HotSpotX</key>
+          <integer>15</integer>
+          <key>HotSpotY</key>
+          <integer>15</integer>
+          <key>PointsWide</key>
+          <integer>32</integer>
+          <key>PointsHigh</key>
+          <integer>32</integer>
+          <key>FrameCount</key>
+          <integer>1</integer>
+          <key>FrameDuration</key>
+          <integer>1</integer>
+          <key>Representations</key>
+          <array>
+            <data>
+              iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADBklEQVR4nO2WTUhUURTH
+              jzh+zOhiHPEDBEdKQYmhL2IkWmQb2+iikCikNhWtokW1y1yEgjpZkUlg+AF9qJQFESim
+              GyXERVq2GKyoFiZJRU7i0/fe/JsjVxjsvo8Zx50HznC595zz/937zn1viLYtRstqUpNq
+              nmgFtQNaVUW3eoG96rF2/NADrSSrSU3bMuG6UX2Pv029u6NVDXmaViHz/ICqFLeqj/wd
+              amXChOdCKDz/VHuR26KGjYRlXnJbnah9pu3elDiAU9deaouxCEd7UauqdbzRz8QrXjf+
+              MRzTrmVe06WGV3XUxyp+GQBqH6qbEl/3yS86l7tiV7wCgMYZiRBnH3q7BsA/R6zE0wF8
+              grBddxID8HpGXy/5mTXMAC4iytpHNWnBgpaVRc+N3698gR+N7Dxem5PE5rWsYn4xHF32
+              kpF4EoDZ6MiFv+H/TsHbuNDlOt3L18tNRJnC3TznbVzo3AjQOa5hg/EJJ8kA9m+MZAvO
+              6zh4TxSs/x5I9Z/NJyInESUTUZJwHjt5jWPWxQPDKjRdVhUHDDtfZnwS1/t/9aT6z+UR
+              kdnrNo0hDrf9GRqblSsLuyoD6DJJWGlubt4pdm5lzoaGhmLOManXLQMYNFRfWXlPRB4i
+              ctgA4BgP55gADMoARoyil5eXJ0TTJdsA4Bg355gAjMgABoyiNU2bczgc2USUYgMghWM5
+              xwTguQwgYJKA6enpo0TkEl1vZLzmmpqaqjSrBeCmDOCEWYaiKOM+ny+HiNINIHguvbS0
+              NEdRlDELgJMyAI9F5yIUCvWUl5fnElGGeBzJwnmcwWscYyHOGtnS8wPQa5HMN2IyGAwe
+              83q9OaIx3TzmOV6zyo98YvoNHyCAveKrZWm6rv9UFGWSncd2ckTtfSY9tAbRbrNYPHbf
+              VFwAZACY2QLxDwAyLQEEhBfA1wSKf4u86otsiUdBFPL1T4D4O95QTOJREE4AtwCocQir
+              ItcVl/gGkLLILjojfyyXbAgvidiyTQtLQDIBVANoANAHYFh4n5irtt1o2ybsH22oO3Wo
+              YJjsAAAAAElFTkSuQmCC
+            </data>
+            <data>
+              iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAADu0lEQVR4nO3ZS2gUWRQG
+              4BuMr+hCI9GAYIsPiEhwVCRhcGFmoxtdKCJK0I2KK5mF486YhSSQpI0OoyJEEoWZ8cGM
+              CiIoPjYGkSxMfCxCHNFZqBhGMa2kOlXVV/7jObHtxMmtqu600veHb1NU3VvnTzq50ErZ
+              2NjY5DAzm9wi2HzWmwu1F731UHPa3ZNu/Z/eJlh9ylsMM5vcyZDv94+cgiug7rb/A1Qd
+              c3+DBa1uAkqbhnQQ5XHXgUWt7h9Q1eauhXzPN2YKroAXCT0Pdv/lXYbZLW4Kgg5savFR
+              9x7U/u0tg3zPX7gFaK23wYEr3gDkauCvmd/qetB2198BtoBxHLwOOp+kUjDeg2fa3OGm
+              YMjX9WALyOHg+xil9neX5LsA0fXMJ1rrX8AWkMXBa5jHKPkeONP1+z7RWvvsJ7AFRBh8
+              CvuHfZGlvw6RfA8ubj7ySVqeMprDFhCigL1s1Jy47RHTF5zbkhyA0kNvr0Jl/HVjOrk+
+              fJ/hunNaPnk1kCKj5GewBQQYvIj1sVHT/z5FxvooxBr7O6Bk+7lloJSawaZnoOtyX6yx
+              vx3GKqC90yP/E/kI01y2AIMCVjKj9L7yyY/Hh8jwy9W/jMOkqp3loJSayiawogxyne6T
+              52SdzMHjN1zi+ZoYZBXYAgwK+OLIaxr5SBy88OYMTKraNQeUUpNZ0NBzUsSaY++uw50+
+              X0OI7AdbgEEBHSxoktDc3LwQ0n7lo4bWaWhoWASyT4j3Ow22AIMCrrFg0yeTD0EpVcqK
+              WdTIOrSu7BOiAJrLFmBQwC0WKIODg/cg7aAj/9aiRtahdWWfEAXQXLYAgwIuskDxPO8F
+              FBcXzwKl1EQWNbSOrCv7hCjgEtgCDAqIs1Dp6elZB0qpEiZH3aCR52id7u7utRD2vbTW
+              h8EWYFDAFhYqjuN0QmVlZRkopaYw0yLkPnquoqKiDBzHuQMRCtgKtgCDAkpZ2CMnJZFI
+              nIHq6urZoJSaxuSP44QMcp3uk+dknQiDyxyzwBZgGq31ORYpyWSyC3p7ezdCLBYrg7QD
+              E5Hrcp88F3V/rfUFMB7cFvC5gOVMvmrKSnzf/w8cx+lKJ9eztU/ae68AW0DY4DsQ9r3l
+              JIQe3BbwuYBp7BH71vOYTQdbQLaitY6x5+xby79sPmRtcFvAyCLmsR6W7zxg9APK2eC2
+              gJFFTGVHmMtyHdlH9i2BcRvcFvD1QpawdvaBRY2sI+vSPvmed0QKvoDMyEFEa72BNbDz
+              7EYGuS73yXPZPdCMVwq+ABsbm+8iHwEVOu3ROCwfuAAAAABJRU5ErkJggg==
+            </data>
+          </array>
+        </dict>
+  </dict>
+  <key>HiDPI</key>
+  <true/>
+  <key>Identifier</key>
+  <string>com.makipom.bluearchive.regular.diagnostic.countingup</string>
+  <key>MinimumVersion</key>
+  <integer>2</integer>
+  <key>Version</key>
+  <integer>2</integer>
+</dict>
+</plist>

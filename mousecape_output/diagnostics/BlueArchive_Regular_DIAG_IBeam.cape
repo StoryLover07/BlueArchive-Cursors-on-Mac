@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Author</key>
+  <string>makipom; diagnostic cape assembled from converted static output</string>
+  <key>CapeName</key>
+  <string>Blue Archive Regular DIAG IBeam</string>
+  <key>CapeVersion</key>
+  <integer>1</integer>
+  <key>Cloud</key>
+  <false/>
+  <key>Cursors</key>
+  <dict>
+    <key>com.apple.coregraphics.IBeam</key>
+    <dict>
+          <key>HotSpotX</key>
+          <integer>15</integer>
+          <key>HotSpotY</key>
+          <integer>15</integer>
+          <key>PointsWide</key>
+          <integer>32</integer>
+          <key>PointsHigh</key>
+          <integer>32</integer>
+          <key>FrameCount</key>
+          <integer>1</integer>
+          <key>FrameDuration</key>
+          <integer>1</integer>
+          <key>Representations</key>
+          <array>
+            <data>
+              iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABkklEQVR4nO3Xu0oDQRQG
+              4F+Nl4j3C4mgmNgo2GllZ+UDaFQQBbG08Q1EIVVAU6hghJDGraMoIjZeKxvthMBWJiaR
+              XXAvktXszpE1W0SwUGFjMz8cmGnO+ZhqDvDzeAA0AGgC0BqJRHyiKI7JsjyRTqcHAdT8
+              otevUw2gHkAzgI5wONyvaVrMNE2RMZa3LOuuUCjMpFIpj1sAu3EjgHYAfkmS1hhjRSoL
+              YyxrWdaQW4A65+m7APTquh63Z9LX2PcRNwEtAHwAAqqqJuj7jFYCEPxPgB/AAAdwAAdw
+              AAdwAAdwAAf8OyCTVROqTmS829/x0mRWOlQEEMzk1ISiESk6kfTCSHllpJaqIr/igP0C
+              jzlGZ7cmLey8fdb8tkFzW4arAHsx6QbQl81r8cNrk5ZjbxSKGjQdNWhq06DJDfcAtc5q
+              1gGgR5aV3eMbk8VPirS4XQKEXAbUlC2nnYIgDB9cFi4Or4t67KhI64LxtLKnrx6cP3vd
+              AlQ5C6rXQbQlk8mBkyt5dv9UW7p/eBkXBKH+L40/AHIVH4PqETY9AAAAAElFTkSuQmCC
+            </data>
+            <data>
+              iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAACJklEQVR4nO3bv2sTYRzH
+              8VOrteKPWpVWUNQuCm5m6ubkH6BVQRTE0cX/QBQyBayDFYwQsvTmtFSKuPijTi66CYFM
+              pqaVHDR3J7mau+fk89z3EAMpnAgP6X0+8PoDvm+STHks6/9vROwXB8URKJVKk9BoNGbA
+              cZwr0Gw2z4NlWXvE0C63AXaLUXFITECxWDwDnueVIQzDBiilNiCKos/Q7XZvQL1eHwHT
+              R2VZ7gOkH/0D4qiYgna7/QiUUj2IB0wp1YIoii6A6aOyLPcB9on0R++4OAW+71cAN4qB
+              DcQlMH1UljGAOCwmxVlwXbcK2xzevwKYPirLGGBAgHPAADkMMCWmgQEYgAEYgAEYgAEY
+              gAEYgAEYgAEYgAEYgAEYgAEYgAEYgAEYgAEYgAEYgAEYgAEYgAEYgAEYgAF2coC1llsF
+              149jCH4llEqkU0ppDLCDAug/Sq6tu1XoeHGs+Yn2ptI6PxPuHwUwfVSWMcB2f5ZOvwLf
+              1lUMbz6F2p3nW3+5PR9ot54FBTB9VJYxQN+DiRPiNLQ2vAosrYYx3C9vabNPA+26uDaX
+              uPokKIDpo7Is9wH2ivTR1IQ4CY7TeQGvPoYKKiu9GO7OB1oaYHYuwQBDGCB98tr/cPIY
+              2LZ9ERbfd9/B0mrPh/JyL4bHdvAdHrz0H8Li2x9jYPqoLMt9gF0ifUA5JtIQ41Cr1aZh
+              5YNzExZee/fgy9fNy2Db9iiYPuZfNpQBfgMX8H4JPM15cgAAAABJRU5ErkJggg==
+            </data>
+          </array>
+        </dict>
+  </dict>
+  <key>HiDPI</key>
+  <true/>
+  <key>Identifier</key>
+  <string>com.makipom.bluearchive.regular.diagnostic.ibeam</string>
+  <key>MinimumVersion</key>
+  <integer>2</integer>
+  <key>Version</key>
+  <integer>2</integer>
+</dict>
+</plist>

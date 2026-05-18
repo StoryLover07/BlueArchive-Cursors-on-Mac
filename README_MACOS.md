@@ -135,12 +135,25 @@ Still needs user-side runtime validation:
 - Confirm cursor replacement behavior in common apps.
 - Confirm Arrow, Text, and Link hotspot feel.
 
+## Runtime Diagnostics
+
+If the full capes import but Arrow, IBeam, or resize cursors still do not apply consistently, stop changing the broad cursor mapping and use the minimal diagnostics instead:
+
+```sh
+node scripts/make_diagnostic_capes.js
+```
+
+This writes one-identifier test capes to `mousecape_output/diagnostics/`, such as `BlueArchive_Regular_DIAG_Arrow.cape`, `BlueArchive_Regular_DIAG_IBeam.cape`, `BlueArchive_Regular_DIAG_Link.cape`, `BlueArchive_Regular_DIAG_ResizeNS.cape`, and `BlueArchive_Regular_DIAG_Wait.cape`.
+
+See `docs/mousecape_runtime_diagnostics.md` for the test matrix and Mousecape dump notes.
+
 ## Rebuild
 
 From the project root:
 
 ```sh
 node scripts/convert_cursors.js
+node scripts/make_diagnostic_capes.js
 node scripts/validate_mousecape_outputs.js
 ```
 
