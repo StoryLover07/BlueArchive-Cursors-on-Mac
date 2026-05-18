@@ -147,6 +147,48 @@ This writes one-identifier test capes to `mousecape_output/diagnostics/`, such a
 
 See `docs/mousecape_runtime_diagnostics.md` for the test matrix and Mousecape dump notes.
 
+## Experimental Native Overlay
+
+On macOS 26, Mousecape/CoreGraphics runtime cursor replacement may fail even for one-identifier diagnostic capes. When `DIAG_Link`, `DIAG_Arrow`, and IBeam diagnostics all fail, use the experimental overlay prototype instead of continuing to tune Mousecape identifiers.
+
+The prototype lives in `NativeCursorOverlay/` and renders the existing converted Blue Archive PNG frames in a transparent click-through AppKit overlay window.
+
+Build and run:
+
+```sh
+cd NativeCursorOverlay
+swift run bluearchive-cursor-overlay --repo .. --theme Regular --role Arrow --verbose
+```
+
+Safer first visual test, with the native cursor still visible:
+
+```sh
+swift run bluearchive-cursor-overlay --repo .. --theme Regular --role Arrow --no-hide --verbose
+```
+
+Animated wait test:
+
+```sh
+swift run bluearchive-cursor-overlay --repo .. --theme Regular --role Wait --verbose
+```
+
+Runtime role-switch verification:
+
+```sh
+swift run bluearchive-cursor-overlay --repo .. --theme Regular --role Arrow --no-hide --duration 5 --cycle-seconds 1 --verbose
+```
+
+Physical hotkeys, when Input Monitoring/Accessibility permissions allow the event tap to observe key events:
+
+- `Control+Option+Command+A`: Arrow
+- `Control+Option+Command+T`: Text/IBeam
+- `Control+Option+Command+L`: Link
+- `Control+Option+Command+W`: Wait
+- `Control+Option+Command+N`: Resize N/S
+- `Control+Option+Command+E`: Resize E/W
+
+See `docs/overlay_cursor_architecture.md` for the current architecture, limitations, and context-detection plan.
+
 ## Rebuild
 
 From the project root:
