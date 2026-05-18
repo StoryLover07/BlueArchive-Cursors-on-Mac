@@ -25,18 +25,18 @@ Static PNG assets are written to `converted_assets_static/` and `generated_frame
 
 ## Additional cursor aliases
 
-The STATIC capes now use narrow aliases, modeled after the working Link cursor:
+The STATIC capes now use only aliases that exist in Mousecape's own cursor map:
 
 - Arrow and context arrow.
-- IBeam and IBeamXOR.
+- IBeam, IBeamXOR, and horizontal IBeam.
 - Link and pointing hand.
-- Wait and busy.
-- Move.
+- Wait, busy, and counting states.
+- Move, open/closed hand, and resize square.
 - Forbidden.
 - Help.
-- Primary Resize NS, EW, Diagonal 1, and Diagonal 2.
+- Primary Resize NS/EW/Diagonal identifiers plus the matching one-sided and window-edge resize identifiers.
 
-Each STATIC cape currently contains 15 cursor entries.
+Each STATIC cape currently contains 36 cursor entries. Every entry has `FrameCount=1`.
 
 ## Recommended testing order
 
@@ -44,4 +44,4 @@ Each STATIC cape currently contains 15 cursor entries.
 2. Apply it in Mousecape.
 3. Test Arrow, IBeam, Link, Wait/Busy, and all resize directions.
 4. Import and test `BlueArchive_Millennium_STATIC.cape`.
-5. Only after both are stable, try the non-static animated capes.
+5. If the static capes are stable, try the animated capes for the confirmed loading animation.
