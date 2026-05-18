@@ -4,8 +4,8 @@
 
 - Generated `mousecape_output/BlueArchive_Regular_STATIC.cape`.
 - Generated `mousecape_output/BlueArchive_Millennium_STATIC.cape`.
-- Generated `mousecape_output/BlueArchive_Regular.cape` (Improved Animated).
-- Generated `mousecape_output/BlueArchive_Millennium.cape` (Improved Animated).
+- Generated `mousecape_output/BlueArchive_Regular.cape`.
+- Generated `mousecape_output/BlueArchive_Millennium.cape`.
 - Extracted all required Regular and Millennium cursor roles.
 - Generated 1x and 2x PNG assets.
 - Generated separate STATIC 1x and 2x PNG assets.
@@ -13,14 +13,15 @@
 - Generated separate STATIC first-frame assets.
 - Preserved Windows cursor hotspot metadata in generated documentation and cape files.
 - Produced mapping and hotspot documentation for manual Mousecape assembly if needed.
-- Updated BOTH STATIC and Animated capes to use the same narrow cursor-id pattern (aliases) that makes Link/clickable hover reliable.
+- Updated BOTH STATIC and animated capes to use only cursor ids from Mousecape's own cursor map.
+- Static Text/Wait now use the most visible extracted frame instead of blindly using the first animation frame.
 
 ## What Works (Improved)
 
-- Animated capes now include cursor ID aliases for better reliability in macOS.
+- Animated capes now include official cursor-id aliases for better reliability in macOS.
 - Regular `text.ani` and `loading.ani` variable timing was averaged for smoother Mousecape playback.
 - Millennium `millennium_loading_v1.ani` is now downsampled to 24 frames (Mousecape limit) to preserve the full animation cycle.
-- Runtime `.cape` import/application has been verified to produce valid plist structures.
+- Loading animation was reported by the user as natural; it remains enabled in the animated capes.
 
 ## What Failed
 
@@ -34,26 +35,26 @@
 
 Recommended files:
 
-- `BlueArchive_Regular_STATIC.cape`
-- `BlueArchive_Millennium_STATIC.cape`
-
-Experimental files:
-
 - `BlueArchive_Regular.cape`
 - `BlueArchive_Millennium.cape`
+
+Static fallback files:
+
+- `BlueArchive_Regular_STATIC.cape`
+- `BlueArchive_Millennium_STATIC.cape`
 
 ## Animation Preservation
 
 - Static cursor roles: preserved.
-- STATIC capes intentionally disable animation and use first-frame cursor images.
+- STATIC capes intentionally disable animation and use visible single-frame cursor images.
 - Millennium Text animation: preserved.
 - Regular Text and Wait animations: approximated due to Mousecape timing limits.
 - Millennium Wait animation: approximated due to Mousecape's 24-frame limit.
 
 ## Manual Steps Remaining
 
-- Import both STATIC `.cape` files into Mousecape 1813.
-- Apply Regular STATIC and Millennium STATIC themes once each.
+- Import both animated `.cape` files into Mousecape 1813 first.
+- If an app still shows cursor instability, apply the matching STATIC fallback cape.
 - Confirm hotspot feel in real use.
 - If Mousecape rejects either generated cape, assemble from `converted_assets_static`, `mapping.json`, and `docs/hotspots_static.json`.
 

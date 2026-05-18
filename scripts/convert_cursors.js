@@ -27,53 +27,60 @@ const MAC_CURSOR_ID_ALIASES = {
   Arrow: [
     "com.apple.coregraphics.Arrow",
     "com.apple.coregraphics.ArrowCtx",
-    "com.apple.cursor.1",
   ],
   Text: [
     "com.apple.coregraphics.IBeam",
     "com.apple.coregraphics.IBeamXOR",
-    "com.apple.cursor.0",
+    "com.apple.cursor.26",
   ],
   Wait: [
     "com.apple.coregraphics.Wait",
     "com.apple.cursor.4",
+    "com.apple.cursor.14",
+    "com.apple.cursor.15",
+    "com.apple.cursor.16",
   ],
   Link: [
     "com.apple.cursor.2",
     "com.apple.cursor.13",
-    "com.apple.cursor.15",
-    "com.apple.coregraphics.PointingHand",
   ],
   Move: [
     "com.apple.coregraphics.Move",
+    "com.apple.cursor.11",
+    "com.apple.cursor.12",
     "com.apple.cursor.39",
   ],
   Forbidden: [
     "com.apple.cursor.3",
-    "com.apple.coregraphics.NotAllowed",
   ],
   Help: [
     "com.apple.cursor.40",
-    "com.apple.coregraphics.QuestionMark",
   ],
   ResizeNS: [
     "com.apple.cursor.23",
-    "com.apple.coregraphics.ResizeNS",
+    "com.apple.cursor.21",
+    "com.apple.cursor.22",
+    "com.apple.cursor.31",
+    "com.apple.cursor.32",
+    "com.apple.cursor.36",
   ],
   ResizeEW: [
     "com.apple.cursor.19",
-    "com.apple.coregraphics.ResizeEW",
+    "com.apple.cursor.17",
+    "com.apple.cursor.18",
+    "com.apple.cursor.27",
+    "com.apple.cursor.28",
+    "com.apple.cursor.38",
   ],
   ResizeDiag1: [
     "com.apple.cursor.34",
-    "com.apple.coregraphics.ResizeNWSE",
+    "com.apple.cursor.33",
+    "com.apple.cursor.35",
   ],
   ResizeDiag2: [
     "com.apple.cursor.30",
-    "com.apple.coregraphics.ResizeNESW",
-  ],
-  Background: [
-    "com.apple.cursor.10",
+    "com.apple.cursor.29",
+    "com.apple.cursor.37",
   ],
 };
 
@@ -276,6 +283,27 @@ function stackFrames(frames) {
   return { width, height: height * frames.length, rgba };
 }
 
+function visiblePixelScore(frame) {
+  let score = 0;
+  for (let i = 3; i < frame.rgba.length; i += 4) {
+    score += frame.rgba[i];
+  }
+  return score;
+}
+
+function bestStaticFrame(frames) {
+  let best = frames[0];
+  let bestScore = visiblePixelScore(best);
+  for (const frame of frames.slice(1)) {
+    const score = visiblePixelScore(frame);
+    if (score > bestScore) {
+      best = frame;
+      bestScore = score;
+    }
+  }
+  return best;
+}
+
 function parseCurBuffer(buffer, sourceName) {
   if (buffer.readUInt16LE(0) !== 0 || buffer.readUInt16LE(2) !== 2) {
     throw new Error(`${sourceName} is not a Windows cursor resource`);
@@ -464,10 +492,10 @@ function convertOne(themeName, role, fileName, theme, report, options = {}) {
   }
 
   if (options.staticOnly && frames.length > 1) {
-    frames = [frames[0]];
+    frames = [bestStaticFrame(frames)];
     frameDuration = 1;
     status = "static-disabled";
-    note = "Animation disabled for STATIC cape compatibility; first source frame is used.";
+    note = "Animation disabled for STATIC cape compatibility; the most visible source frame is used.";
   }
 
   frames.forEach((frame, index) => {
@@ -549,8 +577,7 @@ function main() {
     const cursors = {};
     const staticCursors = {};
     mapping[themeName] = {};
-    const allFiles = { ...theme.files, ...(theme.optional || {}) };
-    for (const [role, fileName] of Object.entries(allFiles)) {
+    for (const [role, fileName] of Object.entries(theme.files)) {
       const cursorId = MAC_CURSOR_IDS[role];
       const animatedCursor = convertOne(themeName, role, fileName, theme, report);
       for (const alias of MAC_CURSOR_ID_ALIASES[role] || [cursorId]) {

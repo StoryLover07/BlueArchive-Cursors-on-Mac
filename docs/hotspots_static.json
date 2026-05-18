@@ -221,16 +221,6 @@
       "pointsHigh": 32,
       "frameCount": 1,
       "frameDurationSeconds": 1
-    },
-    "Background": {
-      "sourceFile": "millennium_background_aris.ani",
-      "macCursorId": "com.apple.cursor.10",
-      "hotspotX": 6,
-      "hotspotY": 10,
-      "pointsWide": 32,
-      "pointsHigh": 32,
-      "frameCount": 1,
-      "frameDurationSeconds": 1
     }
   }
 }

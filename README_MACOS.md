@@ -28,22 +28,31 @@ No cursor art was redesigned. The conversion preserves the original `.cur` and `
 
 Recommended:
 
+Use the animated capes when you want the confirmed loading animation:
+
+- `mousecape_output/BlueArchive_Regular.cape`
+- `mousecape_output/BlueArchive_Millennium.cape`
+
+These keep Loading/Wait and Text/IBeam animated, while all naturally static roles remain single-frame. They now use only cursor identifiers present in Mousecape's own cursor map.
+
+Fallback:
+
 Use the STATIC capes first:
 
 - `mousecape_output/BlueArchive_Regular_STATIC.cape`
 - `mousecape_output/BlueArchive_Millennium_STATIC.cape`
 
-These are the compatibility-first files. Every cursor entry is a static single-frame entry, and the static roles now use the same narrow cursor-id pattern that made Link/clickable hover reliable.
+These disable all animations and use visible single-frame assets. Static Text/Wait choose the most visible extracted frame instead of blindly using the first animation frame.
 
 1. Open Mousecape 1813.
 2. Use `File > Import Cape`.
-3. Select `mousecape_output/BlueArchive_Regular_STATIC.cape` or `mousecape_output/BlueArchive_Millennium_STATIC.cape`.
+3. Select `mousecape_output/BlueArchive_Regular.cape` or `mousecape_output/BlueArchive_Millennium.cape`.
 4. Select the imported cape in Mousecape.
 5. Click `Apply Cape`.
 
 To switch themes, select the other imported cape and click `Apply Cape` again.
 
-The animated capes remain available, but they should be treated as experimental until the static cursor behavior is confirmed stable on the target Mac.
+If Arrow/Text/Resize still behaves differently across apps, test the matching `_STATIC.cape` as a fallback so animation is removed from the equation.
 
 ## If Cape Import Fails
 
@@ -70,13 +79,11 @@ Retina support is included.
 
 ## Animation Status
 
-The recommended STATIC capes intentionally disable animation. Every cursor role is a single-frame entry.
+The recommended animated capes keep animation for Text/IBeam and Loading/Wait only.
 
-Static roles include:
+Static roles in the animated capes include:
 
 - Arrow / Normal
-- Text / IBeam
-- Loading / Wait
 - Link / Pointing hand / Clickable hover
 - Move
 - Forbidden / Block
@@ -115,10 +122,11 @@ Completed:
 - Generated recommended STATIC Mousecape `.cape` plist files.
 - Generated experimental animated Mousecape `.cape` plist files.
 - Validated all `.cape` files with `plutil -lint`.
+- Validated all cursor identifiers against Mousecape's own cursor map.
 - Verified representative PNG frame-sheet dimensions with `sips`.
 - Verified STATIC capes contain only `FrameCount=1` cursor entries.
 - Verified STATIC capes have no zero hotspot or point-size values.
-- Reworked STATIC cursor aliases to follow the working Link/clickable hover pattern.
+- Reworked cursor aliases to use official Mousecape ids only.
 
 Still needs user-side runtime validation:
 
@@ -133,6 +141,7 @@ From the project root:
 
 ```sh
 node scripts/convert_cursors.js
+node scripts/validate_mousecape_outputs.js
 ```
 
 The script reads from `source_repos/BlueArchive-Cursors` and writes only generated output folders.
